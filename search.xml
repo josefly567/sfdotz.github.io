@@ -3,9 +3,12 @@
   <entry>
     <title><![CDATA[重大新闻]]></title>
     <url>%2F2017%2F06%2F08%2F%E9%87%8D%E5%A4%A7%E6%96%B0%E9%97%BB%2F</url>
-    <content type="text"><![CDATA[天呐！一名来自南阳的女大学生竟然。。。。 成了我的女朋友。 ##一篇Hello World 以示我对编程的敬意！]]></content>
+    <content type="text"><![CDATA[天呐！一名来自南阳的女大学生竟然。。。。 成了我的女朋友。 一篇Hello World 以示我对编程的敬意！]]></content>
       <categories>
         <category>生活</category>
       </categories>
+      <tags>
+        <tag>新闻</tag>
+      </tags>
   </entry>
 </search>
