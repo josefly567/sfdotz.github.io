@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sfdotz.github.io/"/>
-  <updated>2017-06-11T09:56:12.127Z</updated>
+  <updated>2017-06-11T10:45:50.442Z</updated>
   <id>http://sfdotz.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://sfdotz.github.io/2017/06/11/svnServer1/"/>
     <id>http://sfdotz.github.io/2017/06/11/svnServer1/</id>
     <published>2017-06-11T09:54:56.000Z</published>
-    <updated>2017-06-11T09:56:12.127Z</updated>
+    <updated>2017-06-11T10:45:50.442Z</updated>
     
     <content type="html"><![CDATA[<h2 id="SVN服务的搭建（一）"><a href="#SVN服务的搭建（一）" class="headerlink" title="SVN服务的搭建（一）"></a>SVN服务的搭建（一）</h2><a id="more"></a>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ol>
@@ -64,6 +64,7 @@ realm = /opt/svn/repos # 认证空间名，仓库所在目录，如果写你的�
 
 <blockquote>
 <h3 id="即使我走得很慢，但是我從來不會後退。"><a href="#即使我走得很慢，但是我從來不會後退。" class="headerlink" title="即使我走得很慢，但是我從來不會後退。"></a><center>即使我走得很慢，但是我從來不會後退。</center></h3></blockquote>
+<p> 卧槽！,我的排版在本地是很整齐的，非常整齐！！！，为啥上传上来就成了这副惨状！暂时还没找到解决的办法。如果你知道，请告诉我。</p>
 ]]></content>
     
     <summary type="html">
