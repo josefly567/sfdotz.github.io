@@ -5,10 +5,13 @@
     <url>%2F2017%2F06%2F11%2FsvnServer1%2F</url>
     <content type="text"><![CDATA[SVN服务的搭建（一） 安装 安装svn软件 -y install subversion```122. 判断是否安装成功 ```svnserve --version 安装成功后，建立svn仓库,下面的命令以我的svn（/opt/svn/repos）仓库为例 /opt/svn/repos```123456784. 执行完上面的命令后，进入到你的svn仓库会有如下文件，分别为conf, db,format,hooks, locks, README.txt，生成的这些文件我们只用到了conf文件夹，其它的文件夹不需要动###配置#### 进入svn仓库的conf目录下进行配置，需要配置以下三个文件： - passwd : 设置用户名和密码 - authz ： 用来控制权限，可以设置哪些用户可以访问哪些目录 - svnserve ： 设置svn仓库的相关操作1. 先设置用户名和密码，修改passwd文件 #按照 用户名=密码 的格式 [users] zhangsan = 123 lisi = 1234 wangwu = 123456 12. 在设置用户对应的权限，修改authz文件 [/] zhangsan = rw lisi = rw wangwu = r 123 即张三和李四用户对根目录有读写权限，王五用户对根目录只有读权限3. 配置svn仓库，修改svnserve文件 anon-access = none # 使非授权用户无法访问 auth-access = write # 使授权用户有写权限 password-db = password #使用哪个文件作为账号文件 统一使用密码文件 authz-db = authz # 使用哪个文件作为权限文件 realm = /opt/svn/repos # 认证空间名，仓库所在目录，如果写你的工程名 123456789 **!!! 以上语句都必须顶格写, 左侧不能留空格, 否则会出错** **!!!以上语句都必须顶格写, 左侧不能留空格, 否则会出错** **!!!以上语句都必须顶格写, 左侧不能留空格, 否则会出错**###连接 1. 启动 ```svn: svnserve -d -r /opt/svn/repos``` 其中 -d 表示守护进程， -r 表示在后台执行 /opt/svn/repos 为svn的仓库 如果已经有svn在运行，可以换一个端口运行 ```svnserve -d -r /opt/svn/repos --listen-port 3391 同一台服务器可以运行多个svnserver windows客户端使用TortoiseSVN， 连接地址为: svn://your server address 关闭svn服务查看svn服务进程号netstat -ntlp kill 进程号###问题总结 服务器的指定端口号没有开放 端口号被其它服务占用 若你的服务器为云服务器，记得配置安全组，将指定端口号开放####问题解决办法自行google或者参考我的其它博文以上配置博主亲测有效，使用腾讯云的服务器，系统环境为CentOs7，如有问题请在下方留言。持续更新中。。。。 即使我走得很慢，但是我從來不會後退。]]></content>
       <categories>
-        <category>学习，linux，服务搭建</category>
+        <category>学习</category>
+        <category>linux</category>
+        <category>服务搭建</category>
       </categories>
       <tags>
-        <tag>服务搭建，linux</tag>
+        <tag>服务搭建</tag>
+        <tag>linux</tag>
       </tags>
   </entry>
 </search>

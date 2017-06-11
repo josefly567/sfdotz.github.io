@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sfdotz.github.io/"/>
-  <updated>2017-06-11T09:39:12.982Z</updated>
+  <updated>2017-06-11T09:43:52.971Z</updated>
   <id>http://sfdotz.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://sfdotz.github.io/2017/06/11/svnServer1/"/>
     <id>http://sfdotz.github.io/2017/06/11/svnServer1/</id>
     <published>2017-06-11T09:17:03.707Z</published>
-    <updated>2017-06-11T09:39:12.982Z</updated>
+    <updated>2017-06-11T09:43:52.971Z</updated>
     
     <content type="html"><![CDATA[<h2 id="SVN服务的搭建（一）"><a href="#SVN服务的搭建（一）" class="headerlink" title="SVN服务的搭建（一）"></a>SVN服务的搭建（一）</h2><a id="more"></a>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ol>
@@ -71,10 +71,16 @@ realm = /opt/svn/repos # 认证空间名，仓库所在目录，如果写你的�
     
     </summary>
     
-      <category term="学习，linux，服务搭建" scheme="http://sfdotz.github.io/categories/%E5%AD%A6%E4%B9%A0%EF%BC%8Clinux%EF%BC%8C%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/"/>
+      <category term="学习" scheme="http://sfdotz.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="linux" scheme="http://sfdotz.github.io/categories/%E5%AD%A6%E4%B9%A0/linux/"/>
+    
+      <category term="服务搭建" scheme="http://sfdotz.github.io/categories/%E5%AD%A6%E4%B9%A0/linux/%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="服务搭建，linux" scheme="http://sfdotz.github.io/tags/%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%EF%BC%8Clinux/"/>
+      <category term="服务搭建" scheme="http://sfdotz.github.io/tags/%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="linux" scheme="http://sfdotz.github.io/tags/linux/"/>
     
   </entry>
   
