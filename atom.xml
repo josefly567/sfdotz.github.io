@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sfdotz.github.io/"/>
-  <updated>2017-06-11T09:51:50.243Z</updated>
+  <updated>2017-06-11T09:56:12.127Z</updated>
   <id>http://sfdotz.github.io/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title>SVN服务的搭建（一）</title>
     <link href="http://sfdotz.github.io/2017/06/11/svnServer1/"/>
     <id>http://sfdotz.github.io/2017/06/11/svnServer1/</id>
-    <published>2017-06-11T09:17:03.707Z</published>
-    <updated>2017-06-11T09:51:50.243Z</updated>
+    <published>2017-06-11T09:54:56.000Z</published>
+    <updated>2017-06-11T09:56:12.127Z</updated>
     
     <content type="html"><![CDATA[<h2 id="SVN服务的搭建（一）"><a href="#SVN服务的搭建（一）" class="headerlink" title="SVN服务的搭建（一）"></a>SVN服务的搭建（一）</h2><a id="more"></a>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ol>
