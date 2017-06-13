@@ -455,52 +455,14 @@
 
       
         
-          
-            <a id="more"></a>
-<h2 id="SVN服务的搭建（一）"><a href="#SVN服务的搭建（一）" class="headerlink" title="SVN服务的搭建（一）"></a>SVN服务的搭建（一）</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ol>
-<li><p>安装svn软件</p>
-<figure class="highlight plain"><figcaption><span>-y install subversion</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">2. 判断是否安装成功</div><div class="line">```svnserve  --version</div></pre></td></tr></table></figure>
-</li>
-<li><p>安装成功后，建立svn仓库,下面的命令以我的svn（/opt/svn/repos）仓库为例</p>
-<figure class="highlight plain"><figcaption><span>/opt/svn/repos```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">4. 执行完上面的命令后，进入到你的svn仓库会有如下文件，分别为conf,db,format,hooks, locks,README.txt，生成的这些文件我们只用到了conf文件夹，其它的文件夹不需要动</div><div class="line"></div><div class="line">###配置</div><div class="line"></div><div class="line">#### 进入svn仓库的conf目录下进行配置，需要配置以下三个文件：</div><div class="line">- passwd : 设置用户名和密码</div><div class="line">- authz ： 用来控制权限，可以设置哪些用户可以访问哪些目录</div><div class="line">- svnserve ： 设置svn仓库的相关操作</div><div class="line"></div><div class="line">1. 先设置用户名和密码，修改passwd文件</div></pre></td></tr></table></figure>
-<pre><code>#按照 用户名=密码 的格式
-[users]
-    zhangsan = 123
-    lisi = 1234
-    wangwu = 123456        
-</code></pre> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">2. 在设置用户对应的权限，修改authz文件</div></pre></td></tr></table></figure>
-<pre><code>[/]
-    zhangsan = rw
-    lisi = rw
-    wangwu = r            
-</code></pre> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">	即张三和李四用户对根目录有读写权限，王五用户对根目录只有读权限</div><div class="line"></div><div class="line">3. 配置svn仓库，修改svnserve文件</div></pre></td></tr></table></figure>
-<pre><code>anon-access = none # 使非授权用户无法访问
-auth-access = write # 使授权用户有写权限
-password-db = password #使用哪个文件作为账号文件 统一使用密码文件 
-authz-db = authz   # 使用哪个文件作为权限文件 
-realm = /opt/svn/repos # 认证空间名，仓库所在目录，如果写你的工程名
-</code></pre> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">    **!!! 以上语句都必须顶格写, 左侧不能留空格, 否则会出错**</div><div class="line">	**!!!以上语句都必须顶格写, 左侧不能留空格, 否则会出错**</div><div class="line">	**!!!以上语句都必须顶格写, 左侧不能留空格, 否则会出错**</div><div class="line"></div><div class="line">###连接</div><div class="line">1. 启动</div><div class="line">```svn: svnserve -d -r /opt/svn/repos```  </div><div class="line">其中 -d 表示守护进程， -r 表示在后台执行 /opt/svn/repos 为svn的仓库</div><div class="line">如果已经有svn在运行，可以换一个端口运行</div><div class="line">```svnserve -d -r /opt/svn/repos --listen-port 3391</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>同一台服务器可以运行多个svnserver</p>
-<ol>
-<li>windows客户端使用TortoiseSVN， 连接地址为: svn://your server address</li>
-<li>关闭svn服务<br>查看svn服务进程号<pre><code>netstat -ntlp 
-kill 进程号
-</code></pre>###问题总结  <ul>
-<li>服务器的指定端口号没有开放</li>
-<li>端口号被其它服务占用</li>
-<li>若你的服务器为云服务器，记得配置安全组，将指定端口号开放</li>
-</ul>
-</li>
-</ol>
-<p>####问题解决办法自行google或者参考我的其它博文<br>以上配置博主亲测有效，使用腾讯云的服务器，系统环境为CentOs7，如有问题请在下方留言。</p>
-<p align="right">持续更新中。。。。</p>
-
-<blockquote>
-<h3 id="即使我走得很慢，但是我從來不會後退。"><a href="#即使我走得很慢，但是我從來不會後退。" class="headerlink" title="即使我走得很慢，但是我從來不會後退。"></a><center>即使我走得很慢，但是我從來不會後退。</center></h3></blockquote>
-
-          
+          <h2 id="SVN服务的搭建（一）"><a href="#SVN服务的搭建（一）" class="headerlink" title="SVN服务的搭建（一）"></a>SVN服务的搭建（一）</h2>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/11/svnServer1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
