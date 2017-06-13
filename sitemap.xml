@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://sfdotz.github.io/tags/index.html</loc>
+    
+    <lastmod>2017-06-13T13:02:49.509Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://sfdotz.github.io/categories/index.html</loc>
+    
+    <lastmod>2017-06-13T13:02:34.918Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://sfdotz.github.io/2017/06/11/svnServer1/</loc>
     
     <lastmod>2017-06-13T12:42:31.327Z</lastmod>
@@ -19,20 +33,6 @@
     <loc>http://sfdotz.github.io/photo/index.html</loc>
     
     <lastmod>2017-06-09T05:39:32.462Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://sfdotz.github.io/tags/index.html</loc>
-    
-    <lastmod>2017-06-09T00:25:20.580Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://sfdotz.github.io/categories/index.html</loc>
-    
-    <lastmod>2017-06-09T00:23:58.912Z</lastmod>
     
   </url>
   
