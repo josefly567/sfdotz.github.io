@@ -5,18 +5,26 @@
     
   <url>
     <loc>http://sfdotz.github.io/2017/06/11/svnServer1/</loc>
-    <lastmod>2017-06-13T12:34:02.334Z</lastmod>
+    <lastmod>2017-06-13T12:37:54.324Z</lastmod>
     <data>
         <display>
         <title>SVN服务的搭建（一）</title>
         <pubTime>2017-06-11T09:54:56.717Z</pubTime>
         
-        <tag>服务搭建，linux</tag>
+        <tag>服务搭建</tag>
+         
+        <tag>linux</tag>
          
          
            
              
-              <breadCrumb title="学习，linux，服务搭建" url="http://sfdotz.github.io/categories/%E5%AD%A6%E4%B9%A0%EF%BC%8Clinux%EF%BC%8C%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/"/>
+              <breadCrumb title="学习" url="http://sfdotz.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="linux" url="http://sfdotz.github.io/categories/%E5%AD%A6%E4%B9%A0/linux/"/>
+          
+             
+              <breadCrumb title="服务搭建" url="http://sfdotz.github.io/categories/%E5%AD%A6%E4%B9%A0/linux/%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/"/>
           
         </display>
     </data>
