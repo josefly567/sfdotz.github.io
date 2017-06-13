@@ -121,7 +121,7 @@
 <meta property="og:url" content="http://sfdotz.github.io/2017/06/11/svnServer1/index.html">
 <meta property="og:site_name" content="Mr.zhao">
 <meta property="og:description" content="SVN服务的搭建（一）">
-<meta property="og:updated_time" content="2017-06-13T12:41:11.236Z">
+<meta property="og:updated_time" content="2017-06-13T12:42:31.327Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SVN服务的搭建（一）">
 <meta name="twitter:description" content="SVN服务的搭建（一）">
@@ -459,10 +459,10 @@
         <h2 id="SVN服务的搭建（一）"><a href="#SVN服务的搭建（一）" class="headerlink" title="SVN服务的搭建（一）"></a>SVN服务的搭建（一）</h2><a id="more"></a>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ol>
 <li><p>安装svn软件</p>
-<figure class="highlight plain"><figcaption><span>-y install subversion</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">2. 判断是否安装成功</div><div class="line">```svnserve  --version</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>-y install subversion ```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">2. 判断是否安装成功</div><div class="line">``` svnserve  --version</div></pre></td></tr></table></figure>
 </li>
 <li><p>安装成功后，建立svn仓库,下面的命令以我的svn（/opt/svn/repos）仓库为例</p>
-<figure class="highlight plain"><figcaption><span>/opt/svn/repos```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">4. 执行完上面的命令后，进入到你的svn仓库会有如下文件，分别为conf,db,format,hooks, locks,README.txt，生成的这些文件我们只用到了conf文件夹，其它的文件夹不需要动</div><div class="line"></div><div class="line">###配置</div><div class="line"></div><div class="line">#### 进入svn仓库的conf目录下进行配置，需要配置以下三个文件：</div><div class="line">- passwd : 设置用户名和密码</div><div class="line">- authz ： 用来控制权限，可以设置哪些用户可以访问哪些目录</div><div class="line">- svnserve ： 设置svn仓库的相关操作</div><div class="line"></div><div class="line">1. 先设置用户名和密码，修改passwd文件</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>/opt/svn/repos ```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">4. 执行完上面的命令后，进入到你的svn仓库会有如下文件，分别为conf,db,format,hooks, locks,README.txt，生成的这些文件我们只用到了conf文件夹，其它的文件夹不需要动</div><div class="line"></div><div class="line">###配置</div><div class="line"></div><div class="line">#### 进入svn仓库的conf目录下进行配置，需要配置以下三个文件：</div><div class="line">- passwd : 设置用户名和密码</div><div class="line">- authz ： 用来控制权限，可以设置哪些用户可以访问哪些目录</div><div class="line">- svnserve ： 设置svn仓库的相关操作</div><div class="line"></div><div class="line">1. 先设置用户名和密码，修改passwd文件</div></pre></td></tr></table></figure>
 <pre><code>#按照 用户名=密码 的格式
 [users]
     zhangsan = 123
