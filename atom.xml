@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sfdotz.me/"/>
-  <updated>2017-06-14T09:43:14.006Z</updated>
+  <updated>2017-06-14T13:34:39.820Z</updated>
   <id>http://sfdotz.me/</id>
   
   <author>
@@ -16,11 +16,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>svnServer3</title>
+    <link href="http://sfdotz.me/2017/06/14/svnServer3/"/>
+    <id>http://sfdotz.me/2017/06/14/svnServer3/</id>
+    <published>2017-06-14T13:34:39.000Z</published>
+    <updated>2017-06-14T13:34:39.820Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>SVN服务的搭建（二）</title>
     <link href="http://sfdotz.me/2017/06/14/svnServer2/"/>
     <id>http://sfdotz.me/2017/06/14/svnServer2/</id>
     <published>2017-06-14T05:45:32.306Z</published>
-    <updated>2017-06-14T09:43:14.006Z</updated>
+    <updated>2017-06-14T13:39:21.058Z</updated>
     
     <content type="html"><![CDATA[<h1 id="如何优雅的管理svn项目"><a href="#如何优雅的管理svn项目" class="headerlink" title="如何优雅的管理svn项目"></a><center>如何优雅的管理svn项目</center></h1><a id="more"></a>
 <h2 id="在我的SVN服务的搭建-一-中已经可以正常的使用svn去管理我们的项目，这篇我将介绍如何优雅的去管理多个svn项目"><a href="#在我的SVN服务的搭建-一-中已经可以正常的使用svn去管理我们的项目，这篇我将介绍如何优雅的去管理多个svn项目" class="headerlink" title="在我的SVN服务的搭建(一)中已经可以正常的使用svn去管理我们的项目，这篇我将介绍如何优雅的去管理多个svn项目"></a>在我的<a href="http://sfdotz.me/2017/06/11/svnServer1/#more">SVN服务的搭建(一)</a>中已经可以正常的使用svn去管理我们的项目，这篇我将介绍如何优雅的去管理多个svn项目</h2><h3 id="在svn目录下创建不同的仓库"><a href="#在svn目录下创建不同的仓库" class="headerlink" title="在svn目录下创建不同的仓库"></a>在svn目录下创建不同的仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">svnadmin create project1</div><div class="line">svnadmin create project2</div><div class="line">svnadmin create project3</div></pre></td></tr></table></figure>
@@ -67,9 +81,9 @@
     <link href="http://sfdotz.me/2017/06/11/svnServer1/"/>
     <id>http://sfdotz.me/2017/06/11/svnServer1/</id>
     <published>2017-06-11T09:54:56.717Z</published>
-    <updated>2017-06-14T06:08:05.049Z</updated>
+    <updated>2017-06-14T13:38:57.617Z</updated>
     
-    <content type="html"><![CDATA[<p></p><h2><p align="center">svn基础教程</p></h2><br><a id="more"></a><p></p>
+    <content type="html"><![CDATA[<h1 id="svn基础教程"><a href="#svn基础教程" class="headerlink" title="svn基础教程"></a><center>svn基础教程</center></h1><a id="more"></a>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ol>
 <li><p>安装svn软件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum -y install subversion</div></pre></td></tr></table></figure>
@@ -129,7 +143,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;/p&gt;&lt;h2&gt;&lt;p align=&quot;center&quot;&gt;svn基础教程&lt;/p&gt;&lt;/h2&gt;&lt;br&gt;
+      &lt;h1 id=&quot;svn基础教程&quot;&gt;&lt;a href=&quot;#svn基础教程&quot; class=&quot;headerlink&quot; title=&quot;svn基础教程&quot;&gt;&lt;/a&gt;&lt;center&gt;svn基础教程&lt;/center&gt;&lt;/h1&gt;
     
     </summary>
     
