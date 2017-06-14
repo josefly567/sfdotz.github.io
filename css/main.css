@@ -1913,7 +1913,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #819170;
+  background: #ff1bff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3097,52 +3097,6 @@ img:hover {
   -webkit-box-shadow: 0 0 14px rgba(202,203,203,0.5);
   -moz-box-shadow: 0 0 14px rgba(202,203,204,0.5);
 }
-.site-meta {
-  float: none;
-}
-.menu {
-  float: none;
-}
-.logo-line-before,
-.logo-line-after {
-  display: none;
-}
-.menu .menu-item a {
-  font-size: 14px;
-  color: #0f2e41;
-  border-radius: 4px;
-}
-.site-meta {
-  margin-left: 0px;
-  text-align: center;
-}
-.site-meta .site-title {
-  font-size: 28px;
-  font-family: 'Comic Sans MS', sans-serif;
-  color: #fff;
-}
-.footer {
-  background: none;
-  font-size: 16px;
-}
-.footer-inner {
-  font-family: 'Comic Sans MS', sans-serif;
-  text-align: center;
-  color: #4c618f;
-}
-.post-toc .nav .active>a {
-  color: #4f7e96;
-}
-.post-toc ol a:hover {
-  color: #7784ba;
-}
-.sidebar-nav .sidebar-nav-active:hover {
-  color: #37596c;
-}
-a {
-  border-bottom: none;
-}
-*
 .post-button {
   margin-top: 30px;
   text-align: center;
