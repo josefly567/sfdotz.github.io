@@ -4,51 +4,8 @@
 
     
   <url>
-    <loc>http://sfdotz.me/blog/2017/svnServer1.html</loc>
-    <lastmod>2017-06-14T17:35:10.977Z</lastmod>
-    <data>
-        <display>
-        <title>SVN服务的搭建（一）</title>
-        <pubTime>2017-06-11T09:54:56.717Z</pubTime>
-        
-        <tag>服务搭建</tag>
-         
-        <tag>linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="学习" url="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/"/>
-          
-             
-              <breadCrumb title="linux" url="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/linux/"/>
-          
-             
-              <breadCrumb title="服务搭建" url="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/linux/%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://sfdotz.me/blog/2017/svnServer4.html</loc>
-    <lastmod>2017-06-14T13:42:26.340Z</lastmod>
-    <data>
-        <display>
-        <title></title>
-        <pubTime>2017-06-14T13:42:26.340Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://sfdotz.me/blog/2017/svnServer2.html</loc>
-    <lastmod>2017-06-14T13:39:21.058Z</lastmod>
+    <lastmod>2017-06-14T19:35:59.233Z</lastmod>
     <data>
         <display>
         <title>SVN服务的搭建（二）</title>
@@ -75,15 +32,28 @@
 
     
   <url>
-    <loc>http://sfdotz.me/blog/2017/svnServer3.html</loc>
-    <lastmod>2017-06-14T13:34:39.820Z</lastmod>
+    <loc>http://sfdotz.me/blog/2017/svnServer1.html</loc>
+    <lastmod>2017-06-14T19:35:46.012Z</lastmod>
     <data>
         <display>
-        <title>svnServer3</title>
-        <pubTime>2017-06-14T13:34:39.000Z</pubTime>
+        <title>SVN服务的搭建（一）</title>
+        <pubTime>2017-06-11T09:54:56.717Z</pubTime>
         
+        <tag>服务搭建</tag>
+         
+        <tag>linux</tag>
+         
          
            
+             
+              <breadCrumb title="学习" url="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="linux" url="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/linux/"/>
+          
+             
+              <breadCrumb title="服务搭建" url="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/linux/%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/"/>
+          
         </display>
     </data>
     </url>

@@ -1910,7 +1910,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4985f1;
+  background: #f63e7e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3122,16 +3122,12 @@ img:hover {
 .post-button a:hover {
   color: #7784ba;
 }
-body {
-  background: url("http://4.blog.xuite.net/4/a/1/d/12080354/blog_8620/txt/15628069/13.jpg");
-  background-attachment: fixed;
-}
 .posts-expand .post-meta {
-  margin: 30px 0 10px 0;
+  margin: 40px 0 10px 0;
 }
 .posts-expand .post-eof {
   display: block;
-  margin: 60px auto 50px;
+  margin: 40px auto 40px;
   width: 0px;
   height: 1px;
   background: #ccc;
