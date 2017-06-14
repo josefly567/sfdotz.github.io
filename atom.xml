@@ -50,9 +50,9 @@
     <link href="http://sfdotz.github.io/2017/06/11/svnServer1/"/>
     <id>http://sfdotz.github.io/2017/06/11/svnServer1/</id>
     <published>2017-06-11T09:54:56.717Z</published>
-    <updated>2017-06-14T03:58:21.243Z</updated>
+    <updated>2017-06-14T06:04:43.419Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="SVN服务的搭建（一）"><a href="#SVN服务的搭建（一）" class="headerlink" title="SVN服务的搭建（一）"></a>SVN服务的搭建（一）</h2><a id="more"></a>
+    <content type="html"><![CDATA[<h2 id="SVN服务的搭建（一）"><a href="#SVN服务的搭建（一）" class="headerlink" title="SVN服务的搭建（一）"></a>SVN服务的搭建（一）</h2><p></p><h2><p align="center">svn基础教程</p></h2><br><a id="more"></a><p></p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ol>
 <li><p>安装svn软件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum -y install subversion</div></pre></td></tr></table></figure>
@@ -112,7 +112,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;SVN服务的搭建（一）&quot;&gt;&lt;a href=&quot;#SVN服务的搭建（一）&quot; class=&quot;headerlink&quot; title=&quot;SVN服务的搭建（一）&quot;&gt;&lt;/a&gt;SVN服务的搭建（一）&lt;/h2&gt;
+      &lt;h2 id=&quot;SVN服务的搭建（一）&quot;&gt;&lt;a href=&quot;#SVN服务的搭建（一）&quot; class=&quot;headerlink&quot; title=&quot;SVN服务的搭建（一）&quot;&gt;&lt;/a&gt;SVN服务的搭建（一）&lt;/h2&gt;&lt;p&gt;&lt;/p&gt;&lt;h2&gt;&lt;p align=&quot;center&quot;&gt;svn基础教程&lt;/p&gt;&lt;/h2&gt;&lt;br&gt;
     
     </summary>
     

@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://sfdotz.github.io/2017/06/14/svnServer2/</loc>
-    <lastmod>2017-06-14T06:02:06.191Z</lastmod>
+    <loc>http://sfdotz.github.io/2017/06/11/svnServer1/</loc>
+    <lastmod>2017-06-14T06:04:43.419Z</lastmod>
     <data>
         <display>
-        <title>SVN服务的搭建（二）</title>
-        <pubTime>2017-06-14T05:45:32.306Z</pubTime>
+        <title>SVN服务的搭建（一）</title>
+        <pubTime>2017-06-11T09:54:56.717Z</pubTime>
         
         <tag>服务搭建</tag>
          
@@ -32,12 +32,12 @@
 
     
   <url>
-    <loc>http://sfdotz.github.io/2017/06/11/svnServer1/</loc>
-    <lastmod>2017-06-14T03:58:21.243Z</lastmod>
+    <loc>http://sfdotz.github.io/2017/06/14/svnServer2/</loc>
+    <lastmod>2017-06-14T06:02:06.191Z</lastmod>
     <data>
         <display>
-        <title>SVN服务的搭建（一）</title>
-        <pubTime>2017-06-11T09:54:56.717Z</pubTime>
+        <title>SVN服务的搭建（二）</title>
+        <pubTime>2017-06-14T05:45:32.306Z</pubTime>
         
         <tag>服务搭建</tag>
          
