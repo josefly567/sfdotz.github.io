@@ -4,27 +4,12 @@
 
     
   <url>
-    <loc>http://sfdotz.me/blog/2017/svnServer4.html</loc>
-    <lastmod>2017-06-14T13:42:26.340Z</lastmod>
+    <loc>http://sfdotz.me/blog/2017/svnServer1.html</loc>
+    <lastmod>2017-06-14T17:35:10.977Z</lastmod>
     <data>
         <display>
-        <title></title>
-        <pubTime>2017-06-14T13:42:26.340Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://sfdotz.me/blog/2017/svnServer2.html</loc>
-    <lastmod>2017-06-14T13:39:21.058Z</lastmod>
-    <data>
-        <display>
-        <title>SVN服务的搭建（二）</title>
-        <pubTime>2017-06-14T05:45:32.306Z</pubTime>
+        <title>SVN服务的搭建（一）</title>
+        <pubTime>2017-06-11T09:54:56.717Z</pubTime>
         
         <tag>服务搭建</tag>
          
@@ -47,12 +32,27 @@
 
     
   <url>
-    <loc>http://sfdotz.me/blog/2017/svnServer1.html</loc>
-    <lastmod>2017-06-14T13:38:57.617Z</lastmod>
+    <loc>http://sfdotz.me/blog/2017/svnServer4.html</loc>
+    <lastmod>2017-06-14T13:42:26.340Z</lastmod>
     <data>
         <display>
-        <title>SVN服务的搭建（一）</title>
-        <pubTime>2017-06-11T09:54:56.717Z</pubTime>
+        <title></title>
+        <pubTime>2017-06-14T13:42:26.340Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://sfdotz.me/blog/2017/svnServer2.html</loc>
+    <lastmod>2017-06-14T13:39:21.058Z</lastmod>
+    <data>
+        <display>
+        <title>SVN服务的搭建（二）</title>
+        <pubTime>2017-06-14T05:45:32.306Z</pubTime>
         
         <tag>服务搭建</tag>
          
