@@ -4,9 +4,9 @@
   <subtitle>一艺之成，当尽毕生之力。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://sfdotz.github.io/"/>
+  <link href="http://sfdotz.me/"/>
   <updated>2017-06-14T06:59:40.475Z</updated>
-  <id>http://sfdotz.github.io/</id>
+  <id>http://sfdotz.me/</id>
   
   <author>
     <name>Mr.zhao</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>SVN服务的搭建（二）</title>
-    <link href="http://sfdotz.github.io/2017/06/14/svnServer2/"/>
-    <id>http://sfdotz.github.io/2017/06/14/svnServer2/</id>
+    <link href="http://sfdotz.me/2017/06/14/svnServer2/"/>
+    <id>http://sfdotz.me/2017/06/14/svnServer2/</id>
     <published>2017-06-14T05:45:32.306Z</published>
     <updated>2017-06-14T06:59:40.475Z</updated>
     
@@ -49,23 +49,23 @@
     
     </summary>
     
-      <category term="学习" scheme="http://sfdotz.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="linux" scheme="http://sfdotz.github.io/categories/%E5%AD%A6%E4%B9%A0/linux/"/>
+      <category term="linux" scheme="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/linux/"/>
     
-      <category term="服务搭建" scheme="http://sfdotz.github.io/categories/%E5%AD%A6%E4%B9%A0/linux/%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/"/>
+      <category term="服务搭建" scheme="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/linux/%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="服务搭建" scheme="http://sfdotz.github.io/tags/%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/"/>
+      <category term="服务搭建" scheme="http://sfdotz.me/tags/%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/"/>
     
-      <category term="linux" scheme="http://sfdotz.github.io/tags/linux/"/>
+      <category term="linux" scheme="http://sfdotz.me/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>SVN服务的搭建（一）</title>
-    <link href="http://sfdotz.github.io/2017/06/11/svnServer1/"/>
-    <id>http://sfdotz.github.io/2017/06/11/svnServer1/</id>
+    <link href="http://sfdotz.me/2017/06/11/svnServer1/"/>
+    <id>http://sfdotz.me/2017/06/11/svnServer1/</id>
     <published>2017-06-11T09:54:56.717Z</published>
     <updated>2017-06-14T06:08:05.049Z</updated>
     
@@ -133,16 +133,16 @@
     
     </summary>
     
-      <category term="学习" scheme="http://sfdotz.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="linux" scheme="http://sfdotz.github.io/categories/%E5%AD%A6%E4%B9%A0/linux/"/>
+      <category term="linux" scheme="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/linux/"/>
     
-      <category term="服务搭建" scheme="http://sfdotz.github.io/categories/%E5%AD%A6%E4%B9%A0/linux/%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/"/>
+      <category term="服务搭建" scheme="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/linux/%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="服务搭建" scheme="http://sfdotz.github.io/tags/%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/"/>
+      <category term="服务搭建" scheme="http://sfdotz.me/tags/%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/"/>
     
-      <category term="linux" scheme="http://sfdotz.github.io/tags/linux/"/>
+      <category term="linux" scheme="http://sfdotz.me/tags/linux/"/>
     
   </entry>
   
