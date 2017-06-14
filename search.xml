@@ -2,17 +2,17 @@
 <search>
   <entry>
     <title></title>
-    <url>%2FsvnServer4.html</url>
+    <url>%2Fblog%2F2017%2FsvnServer4.html</url>
     <content type="text"></content>
   </entry>
   <entry>
     <title><![CDATA[svnServer3]]></title>
-    <url>%2FsvnServer3.html</url>
+    <url>%2Fblog%2F2017%2FsvnServer3.html</url>
     <content type="text"></content>
   </entry>
   <entry>
     <title><![CDATA[SVN服务的搭建（二）]]></title>
-    <url>%2FsvnServer2.html</url>
+    <url>%2Fblog%2F2017%2FsvnServer2.html</url>
     <content type="text"><![CDATA[如何优雅的管理svn项目 在我的SVN服务的搭建(一)中已经可以正常的使用svn去管理我们的项目，这篇我将介绍如何优雅的去管理多个svn项目在svn目录下创建不同的仓库123svnadmin create project1svnadmin create project2svnadmin create project3 分别配置三个仓库中conf目录下的svnserve.conf12345anon-access = noneauth-access = write #授权用户可写password-db = /var/svn/conf/passwd #使用哪个文件作为账号文件 统一使用密码文件password-db = /var/svn/conf/authz #使用哪个文件作为权限文件realm = project1 # 认证空间名，版本库所在目录 权限域名，很重要，写你的工程名 创建在password-db与password-db配置的路径中使用的 文件夹及文件12mkdir /opt/svn/confcp /opt/svn/project1/conf/authz passwd /opt/svn/conf 修改/opt/svn/conf下的两个文件，统一配置所有项目 修改passwd文件，把所有项目用到的用户统一配置在这个文件中 12345678vim passwd [users] #项目一的用户 user1 = 123 #项目二的用户 user2 = 123 #项目三的用户 user3 = 123 修改authz文件，统一配置每个项目的用户所拥有的权限 123456789101112131415vim authz #为用户分组 [groups] admin = user1,user2 guest = user3,user2 #为每个项目分配用户及权限 [目录/project1:/] #项目1的访问控制，guest无法访问 @admin = rw [project2:/] #项目2的访问控制 @guest = rw [project3:/] #项目3的访问控制 @admin = rw @guest = r 对passwd与authz这两个文件的修改立即生效，不需要重启svn服务。如果你不相信，或者你是强迫症患者，附上重启svn服务的代码1/usr/bin/svnserve -d -r /var/svn/ 不要使用系统提供的1/etc/init.d/svnserve start 来启动，因为系统默认的启动脚本中没有使用 –r /svn/project参数指定一个资源。这种情况下启动的svn服务，客户端连接会提示“svn: No repository found in ‘svn://ip/project’ ”这样的错误。 总结一下经过上面的修改如果我们要增加一个svn仓库，并完成配置，只需要一下几个命令：12345svnadmin create svn/project# 配置poject/conf/svnserve.conf# 配置svn/conf/passwd# 配置svn/conf/authz# 完成 经过上面的介绍，相信你们对svn项目的管理和配置有初步的了解，如果你有问题，请在下方留言 在一个崇高的目标支持下，不停地工作，即使慢，也一定会获得成功。]]></content>
       <categories>
         <category>学习</category>
@@ -26,7 +26,7 @@
   </entry>
   <entry>
     <title><![CDATA[SVN服务的搭建（一）]]></title>
-    <url>%2FsvnServer1.html</url>
+    <url>%2Fblog%2F2017%2FsvnServer1.html</url>
     <content type="text"><![CDATA[svn基础教程 安装 安装svn软件 1yum -y install subversion 判断是否安装成功 1svnserve --version 安装成功后，建立svn仓库,下面的命令以我的svn（/opt/svn/repos）仓库为例 1mkdir /opt/svn/repos 执行完上面的命令后，进入到你的svn仓库会有如下文件，分别为conf,db,format,hooks, locks,README.txt，生成的这些文件我们只用到了conf文件夹，其它的文件夹不需要动 配置进入svn仓库的conf目录下进行配置，需要配置以下三个文件： passwd : 设置用户名和密码 authz ： 用来控制权限，可以设置哪些用户可以访问哪些目录 svnserve ： 设置svn仓库的相关操作 先设置用户名和密码，修改passwd文件 12345#按照 用户名=密码 的格式[users] zhangsan = 123 lisi = 1234 wangwu = 123456 在设置用户对应的权限，修改authz文件 1234 [/]zhangsan = rwlisi = rwwangwu = r 即张三和李四用户对根目录有读写权限，王五用户对根目录只有读权限 配置svn仓库，修改svnserve文件 12345anon-access = none # 使非授权用户无法访问auth-access = write # 使授权用户有写权限password-db = password #使用哪个文件作为账号文件 统一使用密码文件 authz-db = authz # 使用哪个文件作为权限文件 realm = /opt/svn/repos # 认证空间名，仓库所在目录，如果写你的工程名 **!!! 以上语句都必须顶格写, 左侧不能留空格, 否则会出错** **!!!以上语句都必须顶格写, 左侧不能留空格, 否则会出错** **!!!以上语句都必须顶格写, 左侧不能留空格, 否则会出错** 连接 启动 12345678svn: svnserve -d -r /opt/svn/repos``` 其中 -d 表示守护进程， -r 表示在后台执行 /opt/svn/repos 为svn的仓库如果已经有svn在运行，可以换一个端口运行``` bashsvnserve -d -r /opt/svn/repos --listen-port 3391 同一台服务器可以运行多个svnserver windows客户端使用TortoiseSVN， 连接地址为: svn://your server address 关闭svn服务查看svn服务进程号 netstat -ntlp kill 进程号 问题总结 服务器的指定端口号没有开放 端口号被其它服务占用 若你的服务器为云服务器，记得配置安全组，将指定端口号开放 问题解决办法自行google或者参考我的其它博文以上配置博主亲测有效，使用腾讯云的服务器，系统环境为CentOs7，如有问题请在下方留言。 持续更新中。。。。 即使我走得很慢，但是我從來不會後退。]]></content>
       <categories>
         <category>学习</category>
