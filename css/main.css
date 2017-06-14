@@ -1910,7 +1910,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff9087;
+  background: #ff73ec;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3121,22 +3121,4 @@ img:hover {
 }
 .post-button a:hover {
   color: #7784ba;
-}
-.site-nav-toggle button {
-  margin-top: 0px;
-  padding: 10px 10px;
-  background: rgba(255,118,0,0.65);
-  border: none;
-  border-radius: 5px;
-}
-.site-nav {
-  top: 55px;
-  border-bottom: none;
-}
-.site-meta {
-  background: rgba(255,255,255,0.9);
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
 }
