@@ -4,36 +4,8 @@
 
     
   <url>
-    <loc>http://sfdotz.me/blog/2017/svnServer3.html</loc>
-    <lastmod>2017-06-15T05:57:17.392Z</lastmod>
-    <data>
-        <display>
-        <title>SVN服务的搭建（三）</title>
-        <pubTime>2017-06-15T05:56:59.833Z</pubTime>
-        
-        <tag>服务搭建</tag>
-         
-        <tag>linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="学习" url="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/"/>
-          
-             
-              <breadCrumb title="linux" url="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/linux/"/>
-          
-             
-              <breadCrumb title="服务搭建" url="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/linux/%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://sfdotz.me/blog/2017/svnServer2.html</loc>
-    <lastmod>2017-06-15T05:55:57.542Z</lastmod>
+    <lastmod>2017-06-15T06:14:45.617Z</lastmod>
     <data>
         <display>
         <title>SVN服务的搭建（二）</title>
@@ -59,10 +31,9 @@
     </url>
 
     
-    
   <url>
     <loc>http://sfdotz.me/blog/2017/svnServer1.html</loc>
-    <lastmod>2017-06-14T19:35:46.012Z</lastmod>
+    <lastmod>2017-06-15T06:12:56.023Z</lastmod>
     <data>
         <display>
         <title>SVN服务的搭建（一）</title>
@@ -87,6 +58,35 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>http://sfdotz.me/blog/2017/svnServer3.html</loc>
+    <lastmod>2017-06-15T06:02:21.946Z</lastmod>
+    <data>
+        <display>
+        <title>SVN服务的搭建（三）</title>
+        <pubTime>2017-06-15T05:56:59.833Z</pubTime>
+        
+        <tag>服务搭建</tag>
+         
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习" url="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="linux" url="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/linux/"/>
+          
+             
+              <breadCrumb title="服务搭建" url="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/linux/%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
     
     

@@ -133,18 +133,18 @@
 
 
 
-<meta name="description" content="如何优雅的管理svn项目">
+<meta name="description" content="前言　　svn服务的安装与配置并不复杂，只是看样子有点乱，我们可以试着让它看起来更加整齐、简单一些，这篇将会教你如何优雅的使用svn管理项目。">
 <meta name="keywords" content="服务搭建,linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SVN服务的搭建（二）">
 <meta property="og:url" content="http://sfdotz.me/blog/2017/svnServer2.html">
 <meta property="og:site_name" content="Mr.zhao">
-<meta property="og:description" content="如何优雅的管理svn项目">
+<meta property="og:description" content="前言　　svn服务的安装与配置并不复杂，只是看样子有点乱，我们可以试着让它看起来更加整齐、简单一些，这篇将会教你如何优雅的使用svn管理项目。">
 <meta property="og:image" content="http://orjpbpt1b.bkt.clouddn.com/sfdotz.me/imageTortoiseSVN.23.png">
-<meta property="og:updated_time" content="2017-06-15T05:55:57.542Z">
+<meta property="og:updated_time" content="2017-06-15T06:14:45.617Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SVN服务的搭建（二）">
-<meta name="twitter:description" content="如何优雅的管理svn项目">
+<meta name="twitter:description" content="前言　　svn服务的安装与配置并不复杂，只是看样子有点乱，我们可以试着让它看起来更加整齐、简单一些，这篇将会教你如何优雅的使用svn管理项目。">
 <meta name="twitter:image" content="http://orjpbpt1b.bkt.clouddn.com/sfdotz.me/imageTortoiseSVN.23.png">
 
 
@@ -485,7 +485,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  641 字
+                  691 字
                 </span>
               
 
@@ -529,7 +529,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://orjpbpt1b.bkt.clouddn.com/sfdotz.me/imageTortoiseSVN.23.png" rel="gallery_cj3y0kwyk000268ai4njinmcw"
+                 href="http://orjpbpt1b.bkt.clouddn.com/sfdotz.me/imageTortoiseSVN.23.png" rel="gallery_cj3y16l1k000224ainp54w0k7"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://orjpbpt1b.bkt.clouddn.com/sfdotz.me/imageTortoiseSVN.23.png" itemprop="contentUrl"/>
               </a>
@@ -542,7 +542,7 @@
       
 
       
-        <h1 id="如何优雅的管理svn项目"><a href="#如何优雅的管理svn项目" class="headerlink" title="如何优雅的管理svn项目"></a><center>如何优雅的管理svn项目</center></h1><a id="more"></a>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>　　svn服务的安装与配置并不复杂，只是看样子有点乱，我们可以试着让它看起来更加整齐、简单一些，这篇将会教你如何优雅的使用svn管理项目。<br><a id="more"></a></p>
 <h2 id="在我的SVN服务的搭建-一-中已经可以正常的使用svn去管理我们的项目，这篇我将介绍如何优雅的去管理多个svn项目"><a href="#在我的SVN服务的搭建-一-中已经可以正常的使用svn去管理我们的项目，这篇我将介绍如何优雅的去管理多个svn项目" class="headerlink" title="在我的SVN服务的搭建(一)中已经可以正常的使用svn去管理我们的项目，这篇我将介绍如何优雅的去管理多个svn项目"></a>在我的<a href="http://sfdotz.me/2017/06/11/svnServer1/#more">SVN服务的搭建(一)</a>中已经可以正常的使用svn去管理我们的项目，这篇我将介绍如何优雅的去管理多个svn项目</h2><h3 id="在svn目录下创建不同的仓库"><a href="#在svn目录下创建不同的仓库" class="headerlink" title="在svn目录下创建不同的仓库"></a>在svn目录下创建不同的仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">svnadmin create project1</div><div class="line">svnadmin create project2</div><div class="line">svnadmin create project3</div></pre></td></tr></table></figure>
 <h3 id="分别配置三个仓库中conf目录下的svnserve-conf"><a href="#分别配置三个仓库中conf目录下的svnserve-conf" class="headerlink" title="分别配置三个仓库中conf目录下的svnserve.conf"></a>分别配置三个仓库中conf目录下的svnserve.conf</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">anon-access = none</div><div class="line">auth-access = write <span class="comment">#授权用户可写</span></div><div class="line">password-db = /var/svn/conf/passwd <span class="comment">#使用哪个文件作为账号文件 统一使用密码文件</span></div><div class="line">password-db = /var/svn/conf/authz <span class="comment">#使用哪个文件作为权限文件</span></div><div class="line">realm = project1 <span class="comment"># 认证空间名，版本库所在目录 权限域名，很重要，写你的工程名</span></div></pre></td></tr></table></figure>
 <h3 id="创建在password-db与password-db配置的路径中使用的-文件夹及文件"><a href="#创建在password-db与password-db配置的路径中使用的-文件夹及文件" class="headerlink" title="创建在password-db与password-db配置的路径中使用的 文件夹及文件"></a>创建在password-db与password-db配置的路径中使用的 文件夹及文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir /opt/svn/conf</div><div class="line">cp /opt/svn/project1/conf/authz passwd  /opt/svn/conf</div></pre></td></tr></table></figure>
@@ -733,7 +733,7 @@
             
             
             <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
+              <a href="/board/index.html">
                 <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
@@ -993,7 +993,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#如何优雅的管理svn项目"><span class="nav-number">1.</span> <span class="nav-text">如何优雅的管理svn项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#在我的SVN服务的搭建-一-中已经可以正常的使用svn去管理我们的项目，这篇我将介绍如何优雅的去管理多个svn项目"><span class="nav-number">1.1.</span> <span class="nav-text">在我的SVN服务的搭建(一)中已经可以正常的使用svn去管理我们的项目，这篇我将介绍如何优雅的去管理多个svn项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在svn目录下创建不同的仓库"><span class="nav-number">1.1.1.</span> <span class="nav-text">在svn目录下创建不同的仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分别配置三个仓库中conf目录下的svnserve-conf"><span class="nav-number">1.1.2.</span> <span class="nav-text">分别配置三个仓库中conf目录下的svnserve.conf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建在password-db与password-db配置的路径中使用的-文件夹及文件"><span class="nav-number">1.1.3.</span> <span class="nav-text">创建在password-db与password-db配置的路径中使用的 文件夹及文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改-opt-svn-conf下的两个文件，统一配置所有项目"><span class="nav-number">1.1.4.</span> <span class="nav-text">修改/opt/svn/conf下的两个文件，统一配置所有项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对passwd与authz这两个文件的修改立即生效，不需要重启svn服务。"><span class="nav-number">1.1.5.</span> <span class="nav-text">对passwd与authz这两个文件的修改立即生效，不需要重启svn服务。</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#如果你不相信，或者你是强迫症患者，附上重启svn服务的代码"><span class="nav-number">1.1.5.1.</span> <span class="nav-text">如果你不相信，或者你是强迫症患者，附上重启svn服务的代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不要使用系统提供的"><span class="nav-number">1.1.5.2.</span> <span class="nav-text">不要使用系统提供的</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结一下"><span class="nav-number">1.1.6.</span> <span class="nav-text">总结一下</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#经过上面的修改如果我们要增加一个svn仓库，并完成配置，只需要一下几个命令："><span class="nav-number">1.1.6.1.</span> <span class="nav-text">经过上面的修改如果我们要增加一个svn仓库，并完成配置，只需要一下几个命令：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">在一个崇高的目标支持下，不停地工作，即使慢，也一定会获得成功。</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#在我的SVN服务的搭建-一-中已经可以正常的使用svn去管理我们的项目，这篇我将介绍如何优雅的去管理多个svn项目"><span class="nav-number">1.1.</span> <span class="nav-text">在我的SVN服务的搭建(一)中已经可以正常的使用svn去管理我们的项目，这篇我将介绍如何优雅的去管理多个svn项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在svn目录下创建不同的仓库"><span class="nav-number">1.1.1.</span> <span class="nav-text">在svn目录下创建不同的仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分别配置三个仓库中conf目录下的svnserve-conf"><span class="nav-number">1.1.2.</span> <span class="nav-text">分别配置三个仓库中conf目录下的svnserve.conf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建在password-db与password-db配置的路径中使用的-文件夹及文件"><span class="nav-number">1.1.3.</span> <span class="nav-text">创建在password-db与password-db配置的路径中使用的 文件夹及文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改-opt-svn-conf下的两个文件，统一配置所有项目"><span class="nav-number">1.1.4.</span> <span class="nav-text">修改/opt/svn/conf下的两个文件，统一配置所有项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对passwd与authz这两个文件的修改立即生效，不需要重启svn服务。"><span class="nav-number">1.1.5.</span> <span class="nav-text">对passwd与authz这两个文件的修改立即生效，不需要重启svn服务。</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#如果你不相信，或者你是强迫症患者，附上重启svn服务的代码"><span class="nav-number">1.1.5.1.</span> <span class="nav-text">如果你不相信，或者你是强迫症患者，附上重启svn服务的代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不要使用系统提供的"><span class="nav-number">1.1.5.2.</span> <span class="nav-text">不要使用系统提供的</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结一下"><span class="nav-number">1.1.6.</span> <span class="nav-text">总结一下</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#经过上面的修改如果我们要增加一个svn仓库，并完成配置，只需要一下几个命令："><span class="nav-number">1.1.6.1.</span> <span class="nav-text">经过上面的修改如果我们要增加一个svn仓库，并完成配置，只需要一下几个命令：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">在一个崇高的目标支持下，不停地工作，即使慢，也一定会获得成功。</span></a></li></ol></li></ol></div>
             
 
           </div>
