@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sfdotz.me/"/>
-  <updated>2017-06-16T08:58:59.464Z</updated>
+  <updated>2017-06-16T09:01:47.846Z</updated>
   <id>http://sfdotz.me/</id>
   
   <author>
@@ -20,9 +20,10 @@
     <link href="http://sfdotz.me/blog/2017/redisInstall.html"/>
     <id>http://sfdotz.me/blog/2017/redisInstall.html</id>
     <published>2017-06-16T08:51:25.391Z</published>
-    <updated>2017-06-16T08:58:59.464Z</updated>
+    <updated>2017-06-16T09:01:47.846Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>　　Redis 是一款开源的，高级键值 (key-value) 缓存 (cache) 和存储 (store) 系统，这是官方的介绍，我更乐意称它为开源的键值数据库。它的用处非常广泛，我目前只是拿它来做缓存，性能非常强劲，如果你需要它，那么本文就是你需要的。</p>
+<a id="more"></a>
 <h1 id="在linux上安装redis服务"><a href="#在linux上安装redis服务" class="headerlink" title="在linux上安装redis服务"></a>在linux上安装redis服务</h1><p>在linux安装redis服务是非常简单的,几条命令就能搞定，附<a href="https://redis.io/download" target="_blank" rel="external">官网地址</a></p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">wget http://download.redis.io/releases/redis-3.2.9.tar.gz</div><div class="line">tar -zxvf redis-3.2.9.tar.gz -C /opt/   <span class="comment">#此处我安装在了opt下</span></div><div class="line"><span class="built_in">cd</span> /opt/redis-3.2.9</div><div class="line">make</div></pre></td></tr></table></figure>
 <p>目录如下<br><img src="http://orjpbpt1b.bkt.clouddn.com/linuxRedisdir.png" alt="redis的linux安装后的目录结构如下"><br>其他文件我们都不用管，我们只用redis.conf（在这里配置redis），src(redis的可执行文件)</p>
@@ -52,7 +53,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;　　Redis 是一款开源的，高级键值 (key-value) 缓存 (cache) 和存储 (store) 系统，这是官方的介绍，我更乐意
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;　　Redis 是一款开源的，高级键值 (key-value) 缓存 (cache) 和存储 (store) 系统，这是官方的介绍，我更乐意称它为开源的键值数据库。它的用处非常广泛，我目前只是拿它来做缓存，性能非常强劲，如果你需要它，那么本文就是你需要的。&lt;/p&gt;
     
     </summary>
     

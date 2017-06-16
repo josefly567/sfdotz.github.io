@@ -133,18 +133,18 @@
 
 
 
-<meta name="description" content="前言　　Redis 是一款开源的，高级键值 (key-value) 缓存 (cache) 和存储 (store) 系统，这是官方的介绍，我更乐意称它为开源的键值数据库。它的用处非常广泛，我目前只是拿它来做缓存，性能非常强劲，如果你需要它，那么本文就是你需要的。 在linux上安装redis服务在linux安装redis服务是非常简单的,几条命令就能搞定，附官网地址 安装1234wget http:">
+<meta name="description" content="前言　　Redis 是一款开源的，高级键值 (key-value) 缓存 (cache) 和存储 (store) 系统，这是官方的介绍，我更乐意称它为开源的键值数据库。它的用处非常广泛，我目前只是拿它来做缓存，性能非常强劲，如果你需要它，那么本文就是你需要的。">
 <meta name="keywords" content="学习,web,redis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="redis的安装与使用">
 <meta property="og:url" content="http://sfdotz.me/blog/2017/redisInstall.html">
 <meta property="og:site_name" content="Mr.zhao">
-<meta property="og:description" content="前言　　Redis 是一款开源的，高级键值 (key-value) 缓存 (cache) 和存储 (store) 系统，这是官方的介绍，我更乐意称它为开源的键值数据库。它的用处非常广泛，我目前只是拿它来做缓存，性能非常强劲，如果你需要它，那么本文就是你需要的。 在linux上安装redis服务在linux安装redis服务是非常简单的,几条命令就能搞定，附官网地址 安装1234wget http:">
+<meta property="og:description" content="前言　　Redis 是一款开源的，高级键值 (key-value) 缓存 (cache) 和存储 (store) 系统，这是官方的介绍，我更乐意称它为开源的键值数据库。它的用处非常广泛，我目前只是拿它来做缓存，性能非常强劲，如果你需要它，那么本文就是你需要的。">
 <meta property="og:image" content="http://orjpbpt1b.bkt.clouddn.com/redisLo.png">
-<meta property="og:updated_time" content="2017-06-16T08:58:59.464Z">
+<meta property="og:updated_time" content="2017-06-16T09:01:47.846Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="redis的安装与使用">
-<meta name="twitter:description" content="前言　　Redis 是一款开源的，高级键值 (key-value) 缓存 (cache) 和存储 (store) 系统，这是官方的介绍，我更乐意称它为开源的键值数据库。它的用处非常广泛，我目前只是拿它来做缓存，性能非常强劲，如果你需要它，那么本文就是你需要的。 在linux上安装redis服务在linux安装redis服务是非常简单的,几条命令就能搞定，附官网地址 安装1234wget http:">
+<meta name="twitter:description" content="前言　　Redis 是一款开源的，高级键值 (key-value) 缓存 (cache) 和存储 (store) 系统，这是官方的介绍，我更乐意称它为开源的键值数据库。它的用处非常广泛，我目前只是拿它来做缓存，性能非常强劲，如果你需要它，那么本文就是你需要的。">
 <meta name="twitter:image" content="http://orjpbpt1b.bkt.clouddn.com/redisLo.png">
 
 
@@ -529,7 +529,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://orjpbpt1b.bkt.clouddn.com/redisLo.png" rel="gallery_cj3zmhj2x00001sainbki8vuz"
+                 href="http://orjpbpt1b.bkt.clouddn.com/redisLo.png" rel="gallery_cj3zmkzuh00005cai25ii9gou"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://orjpbpt1b.bkt.clouddn.com/redisLo.png" itemprop="contentUrl"/>
               </a>
@@ -543,6 +543,7 @@
 
       
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>　　Redis 是一款开源的，高级键值 (key-value) 缓存 (cache) 和存储 (store) 系统，这是官方的介绍，我更乐意称它为开源的键值数据库。它的用处非常广泛，我目前只是拿它来做缓存，性能非常强劲，如果你需要它，那么本文就是你需要的。</p>
+<a id="more"></a>
 <h1 id="在linux上安装redis服务"><a href="#在linux上安装redis服务" class="headerlink" title="在linux上安装redis服务"></a>在linux上安装redis服务</h1><p>在linux安装redis服务是非常简单的,几条命令就能搞定，附<a href="https://redis.io/download" target="_blank" rel="external">官网地址</a></p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">wget http://download.redis.io/releases/redis-3.2.9.tar.gz</div><div class="line">tar -zxvf redis-3.2.9.tar.gz -C /opt/   <span class="comment">#此处我安装在了opt下</span></div><div class="line"><span class="built_in">cd</span> /opt/redis-3.2.9</div><div class="line">make</div></pre></td></tr></table></figure>
 <p>目录如下<br><img src="http://orjpbpt1b.bkt.clouddn.com/linuxRedisdir.png" alt="redis的linux安装后的目录结构如下"><br>其他文件我们都不用管，我们只用redis.conf（在这里配置redis），src(redis的可执行文件)</p>
@@ -737,7 +738,7 @@
             
             
             <div class="site-state-item site-state-categories">
-              <a href="/board/index.html">
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
