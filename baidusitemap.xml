@@ -5,14 +5,29 @@
     
   <url>
     <loc>http://sfdotz.me/blog/2017/redisInstall.html</loc>
-    <lastmod>2017-06-16T08:51:25.391Z</lastmod>
+    <lastmod>2017-06-16T08:58:59.464Z</lastmod>
     <data>
         <display>
-        <title></title>
+        <title>redis的安装与使用</title>
         <pubTime>2017-06-16T08:51:25.391Z</pubTime>
         
+        <tag>学习</tag>
+         
+        <tag>web</tag>
+         
+        <tag>redis</tag>
+         
          
            
+             
+              <breadCrumb title="学习" url="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="web" url="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/web/"/>
+          
+             
+              <breadCrumb title="redis" url="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/web/redis/"/>
+          
         </display>
     </data>
     </url>
