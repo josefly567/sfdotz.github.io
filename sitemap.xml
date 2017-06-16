@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://sfdotz.me/blog/2017/redisInstall.html</loc>
+    
+    <lastmod>2017-06-16T08:51:25.391Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://sfdotz.me/blog/2017/svnServer2.html</loc>
     
     <lastmod>2017-06-15T06:14:45.617Z</lastmod>

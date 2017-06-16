@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sfdotz.me/"/>
-  <updated>2017-06-15T06:02:21.946Z</updated>
+  <updated>2017-06-16T08:51:25.391Z</updated>
   <id>http://sfdotz.me/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://sfdotz.me/blog/2017/redisInstall.html"/>
+    <id>http://sfdotz.me/blog/2017/redisInstall.html</id>
+    <published>2017-06-16T08:51:25.391Z</published>
+    <updated>2017-06-16T08:51:25.391Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>SVN服务的搭建（三）</title>

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2Fblog%2F2017%2FredisInstall.html</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[SVN服务的搭建（三）]]></title>
     <url>%2Fblog%2F2017%2FsvnServer3.html</url>
     <content type="text"><![CDATA[前言 Subversion可以利用Apache的HTTP服务器让Subversion版本库通过web浏览器可见，这样一个Apache-Subversion服务器具备了许多svnserve没有的特性，但是灵活性常常会带来复杂性，这篇将会让你通过浏览器访问你的svn仓库。 下面我将介绍我使用CentOs7的配置过程 安装httpd 1234# 安装yum install -y httpd# 启动systemctl start httpd 安装svn模块下载mod_dav_svn模块 1yum -y install mod_dav_svn 配置httpdhttpd的默认的配置文件为/etc/httpd/conf/httpd.conf 对文件修改之前首先来一个可以让你肆意修改的备份，如果你非常自信，请忽略掉我下面的这条命令 12cd /etc/httpd/conf/cp httpd.conf httpd.conf.bak 修改 1vim /etc/httpd/conf/httpd.conf 找到文件的’LoadModule’,文件不长，你花点时间，费点眼力应该十分钟就能找到,或者你在命令行输入/LoadModule进行查找，在该附近加载mod_dav和mod_dav_svn模块的配置：12LoadModule dav_module modules/mod_dav.soLoadModule dav_svn_module modules/mod_dav_svn.so 在文件末尾加上：123456789101112131415161718192021222324# '/svn'表示我们的svn的访问URL为'http://ip/svn'&lt;Location /svn&gt; # 表示使用”mod_dav_svn”模块，dav是一种http协议, mod_dav_svn只是该协议的一种应用 DAV svn # 若你有多个svn仓库，则只需要配置一个父目录就行，但只能配置一个父目录 # 表示访问'http://ip/svn'路径时，使用'/var/svn'路径下相应的内容 SVNParentPath /opt/svnResponse # 配置单个svn仓库，但可配置多个 # SVNPath /opt/svn/team/ngkz # Authentication: Basic AuthName "Subversion repository" # 输入用户名和密码时的提示信息 AuthType Basic # 认证类型，这里我们使用基本的认证类型 AuthUserFile /opt/svn/htpasswd 表示认证文件的位置，稍后创建。 #此节点表示只对写请求需要用户认证。 &lt;LimitExcept GET PROPFIND OPTIONS REPORT&gt; Require valid-user &lt;/LimitExcept&gt;&lt;/Location&gt;``` 4. svn 的配置- 添加用户:第一次设置用户时使用-c表示新建一个用户文件。回车后输入用户密码，完成对用户的增加``` bash htpasswd –c /opt/svn/httpPasswd user1 第二次添加用户不需要带 –c 参数 如:htpasswduser2 ```12345- apache用户对svn目录授权：``` bashusermod -a -G root apachechmod -R g+w /opt/svngroups apache 注意如果你的服务器安装有tomcat 并且使用的8080端口，请把httpd服务的监听从433改为80。 重启服务1systemctl restart httpd 经过以上配置，我们的svn仓库就可以通过http直接访问了，是不是很方便呢。 完结 每一天都是一年中最完美的日子。]]></content>
