@@ -3,6 +3,36 @@
 
 
     
+  <url>
+    <loc>http://sfdotz.me/blog/2017/tomcat%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%90%AD%E5%BB%BA.html</loc>
+    <lastmod>2017-06-17T13:14:37.681Z</lastmod>
+    <data>
+        <display>
+        <title>tomcat服务器的搭建</title>
+        <pubTime>2017-06-17T12:45:39.290Z</pubTime>
+        
+        <tag>学习</tag>
+         
+        <tag>linux</tag>
+         
+        <tag>tomcat，web服务器</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习" url="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="linux" url="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/linux/"/>
+          
+             
+              <breadCrumb title="服务搭建" url="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/linux/%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://sfdotz.me/blog/2017/redisInstall.html</loc>

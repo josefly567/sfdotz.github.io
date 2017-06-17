@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sfdotz.me/"/>
-  <updated>2017-06-16T09:09:27.931Z</updated>
+  <updated>2017-06-17T13:14:37.681Z</updated>
   <id>http://sfdotz.me/</id>
   
   <author>
@@ -14,6 +14,82 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>tomcat服务器的搭建</title>
+    <link href="http://sfdotz.me/blog/2017/tomcat%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%90%AD%E5%BB%BA.html"/>
+    <id>http://sfdotz.me/blog/2017/tomcat服务器的搭建.html</id>
+    <published>2017-06-17T12:45:39.290Z</published>
+    <updated>2017-06-17T13:14:37.681Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>　　Tomcat服务器是一个免费的开放源代码的Web应用服务器,它运行时占用的系统资源小，是一个小型的轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试JSP程序的首选。如果你想配置一个web服务器来放置自己的web应用，那么请继续往下看。</p>
+<a id="more"></a>
+<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><ul>
+<li>云服务器一台</li>
+<li>域名一个(不要也罢,假如你记得住ip的话)</li>
+<li><a href="https://www.netsarang.com/xshell_download.html" target="_blank" rel="external">x-shell</a>(随便一个远程连接工具都阔以)</li>
+<li>jdk1.8.0安装包<br><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="external">官网</a><br><a href="http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.tar.gz" target="_blank" rel="external">点我直接下载</a></li>
+<li>tomcat8.5.0安装包<br><a href="http://tomcat.apache.org/" target="_blank" rel="external">官网</a><br><a href="http://mirrors.hust.edu.cn/apache/tomcat/tomcat-8/v8.5.15/bin/apache-tomcat-8.5.15.tar.gz" target="_blank" rel="external">点我直接下载</a><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="在这里补充一点"><a href="#在这里补充一点" class="headerlink" title="在这里补充一点"></a>在这里补充一点</h2></li>
+<li>在windows上将上述文件下载过后，可以通过<a href="">WinSCP</a>将文件从windows上传输到远程Linux服务器上进行安装</li>
+<li>或者复制我上面的连接地址，通过远程连接工具<a href="https://www.netsarang.com/xshell_download.html" target="_blank" rel="external">x-shell</a>通过wget命令直接进行下载</li>
+</ul>
+<h2 id="安装jdk"><a href="#安装jdk" class="headerlink" title="安装jdk"></a>安装jdk</h2><ol>
+<li><p>解压到文件夹/usr/local/</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -zxvf jdk-8u131-linux-x64.tar.gz -C /usr/<span class="built_in">local</span>/</div></pre></td></tr></table></figure>
+</li>
+<li><p>配置环境变量<br>修改/etc/profile 文件 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/profile</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>配置JAVA_HOME 写入以下命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> JAVA_HOME=/usr/<span class="built_in">local</span>/jdk1.8.0_121</div><div class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/jre</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$JAVA_HOME</span>/bin</div></pre></td></tr></table></figure></p>
+<p>测试<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> /etc/profile <span class="comment">#使配置文件生效</span></div><div class="line">java javac <span class="comment">#命令测试</span></div></pre></td></tr></table></figure></p>
+<h2 id="安装tomcat"><a href="#安装tomcat" class="headerlink" title="安装tomcat"></a>安装tomcat</h2><ol>
+<li><p>解压到文件夹/usr/local</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -zxvf apache-tomcat-8.5.15.tar.gz -C /usr/<span class="built_in">local</span>/</div></pre></td></tr></table></figure>
+</li>
+<li><p>配置(选改)</p>
+</li>
+</ol>
+<ul>
+<li>修改tomcat/config/service.xml 中tomcat的端口号改为80</li>
+<li>通过浏览器访问主页<a href="http://ip:80/" target="_blank" rel="external">http://ip:80/</a> 如下图<br><img src="http://orjpbpt1b.bkt.clouddn.com/successTomcat.png" alt="tomcat访问成功"><br>　　完成上面两步就可以把自己的web项目部署在服务器上了，但是每次部署还要通过命令行远程传输项目，不免有些麻烦，现在我们就通过tomcat自带的web管理界面去上传我们的项目到服务器<h1 id="管理"><a href="#管理" class="headerlink" title="管理"></a>管理</h1><h2 id="通过ip-远程访问tomcat的web管理界面"><a href="#通过ip-远程访问tomcat的web管理界面" class="headerlink" title="通过ip 远程访问tomcat的web管理界面"></a>通过ip 远程访问tomcat的web管理界面</h2></li>
+</ul>
+<ol>
+<li><p>修改tomcat/conf/tomcat-user.xml配置文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">vim tomcat/conf/tomcat-user.xml</div><div class="line"><span class="comment"># 加入以下文件</span></div><div class="line">&lt;role rolename=<span class="string">"manager-script"</span>/&gt;</div><div class="line">&lt;role rolename=<span class="string">"manager-gui"</span>/&gt;</div><div class="line">&lt;user username=<span class="string">"username"</span> password=<span class="string">"password"</span> roles=<span class="string">"manager-script,manager-gui"</span>/&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>此时只能通过本地访问，若要远程访问，则需要修改以下配置文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">vim tomcat/conf/service.xml</div><div class="line"><span class="comment"># 修改</span></div><div class="line">&lt;Engine name=<span class="string">"Catalina"</span> defaultHost=<span class="string">"119.29.230.44"</span>&gt; </div><div class="line"><span class="comment"># 配置虚拟目录 在&lt;/Host&gt;上加入 </span></div><div class="line">&lt;Context path=<span class="string">"manager"</span> privileged=<span class="string">"true"</span>docBase=<span class="string">"/usr/local/tomcat-8.5.12/webapps/manager"</span>&gt;&lt;/Context&gt;</div><div class="line">&lt;Context path=<span class="string">"host-manager"</span> privileged=<span class="string">"true"</span> docBase=<span class="string">"/usr/local/tomcat-8.5.12/webapps/host-manager"</span>&gt;&lt;/Context&gt;</div><div class="line"><span class="comment"># 启动tomcat</span></div><div class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/tomcat-8.5.12/bin</div><div class="line">./startup.sh</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><img src="http://orjpbpt1b.bkt.clouddn.com/tomcatStartup.png" alt="成功"></p>
+<ol>
+<li>测试登陆<br><a href="http://ip:80/" target="_blank" rel="external">http://ip:80/</a><br>点击上传你的文件吧<br><img src="http://orjpbpt1b.bkt.clouddn.com/tomcatUpLoad.png" alt="上传"><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><blockquote>
+<h2><center>理想和现实总是有差距的，幸好还有差距，不然，谁还稀罕理想？</center></h2></blockquote>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;　　Tomcat服务器是一个免费的开放源代码的Web应用服务器,它运行时占用的系统资源小，是一个小型的轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试JSP程序的首选。如果你想配置一个web服务器来放置自己的web应用，那么请继续往下看。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="linux" scheme="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/linux/"/>
+    
+      <category term="服务搭建" scheme="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/linux/%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="学习" scheme="http://sfdotz.me/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="linux" scheme="http://sfdotz.me/tags/linux/"/>
+    
+      <category term="tomcat，web服务器" scheme="http://sfdotz.me/tags/tomcat%EF%BC%8Cweb%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>redis的安装与使用</title>

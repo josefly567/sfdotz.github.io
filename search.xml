@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[tomcat服务器的搭建]]></title>
+    <url>%2Fblog%2F2017%2Ftomcat%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%90%AD%E5%BB%BA.html</url>
+    <content type="text"><![CDATA[前言 Tomcat服务器是一个免费的开放源代码的Web应用服务器,它运行时占用的系统资源小，是一个小型的轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试JSP程序的首选。如果你想配置一个web服务器来放置自己的web应用，那么请继续往下看。 准备 云服务器一台 域名一个(不要也罢,假如你记得住ip的话) x-shell(随便一个远程连接工具都阔以) jdk1.8.0安装包官网点我直接下载 tomcat8.5.0安装包官网点我直接下载安装在这里补充一点 在windows上将上述文件下载过后，可以通过WinSCP将文件从windows上传输到远程Linux服务器上进行安装 或者复制我上面的连接地址，通过远程连接工具x-shell通过wget命令直接进行下载 安装jdk 解压到文件夹/usr/local/ 1tar -zxvf jdk-8u131-linux-x64.tar.gz -C /usr/local/ 配置环境变量修改/etc/profile 文件 1vim /etc/profile 配置JAVA_HOME 写入以下命令123export JAVA_HOME=/usr/local/jdk1.8.0_121export CLASSPATH=.:$JAVA_HOME/jreexport PATH=$PATH:$JAVA_HOME/bin 测试12source /etc/profile #使配置文件生效java javac #命令测试 安装tomcat 解压到文件夹/usr/local 1tar -zxvf apache-tomcat-8.5.15.tar.gz -C /usr/local/ 配置(选改) 修改tomcat/config/service.xml 中tomcat的端口号改为80 通过浏览器访问主页http://ip:80/ 如下图 完成上面两步就可以把自己的web项目部署在服务器上了，但是每次部署还要通过命令行远程传输项目，不免有些麻烦，现在我们就通过tomcat自带的web管理界面去上传我们的项目到服务器管理通过ip 远程访问tomcat的web管理界面 修改tomcat/conf/tomcat-user.xml配置文件 12345vim tomcat/conf/tomcat-user.xml# 加入以下文件&lt;role rolename="manager-script"/&gt;&lt;role rolename="manager-gui"/&gt;&lt;user username="username" password="password" roles="manager-script,manager-gui"/&gt; 此时只能通过本地访问，若要远程访问，则需要修改以下配置文件 123456789vim tomcat/conf/service.xml# 修改&lt;Engine name="Catalina" defaultHost="119.29.230.44"&gt; # 配置虚拟目录 在&lt;/Host&gt;上加入 &lt;Context path="manager" privileged="true"docBase="/usr/local/tomcat-8.5.12/webapps/manager"&gt;&lt;/Context&gt;&lt;Context path="host-manager" privileged="true" docBase="/usr/local/tomcat-8.5.12/webapps/host-manager"&gt;&lt;/Context&gt;# 启动tomcatcd /usr/local/tomcat-8.5.12/bin./startup.sh 测试登陆http://ip:80/点击上传你的文件吧结语 理想和现实总是有差距的，幸好还有差距，不然，谁还稀罕理想？]]></content>
+      <categories>
+        <category>学习</category>
+        <category>linux</category>
+        <category>服务搭建</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>linux</tag>
+        <tag>tomcat，web服务器</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[redis的安装与使用]]></title>
     <url>%2Fblog%2F2017%2FredisInstall.html</url>
     <content type="text"><![CDATA[前言 Redis 是一款开源的，高级键值 (key-value) 缓存 (cache) 和存储 (store) 系统，这是官方的介绍，我更乐意称它为开源的键值数据库。它的用处非常广泛，我目前只是拿它来做缓存，性能非常强劲，如果你需要它，那么本文就是你需要的。 在linux上安装redis服务在linux安装redis服务是非常简单的,几条命令就能搞定，附官网地址 安装1234wget http://download.redis.io/releases/redis-3.2.9.tar.gztar -zxvf redis-3.2.9.tar.gz -C /opt/ #此处我安装在了opt下cd /opt/redis-3.2.9make 目录如下其他文件我们都不用管，我们只用redis.conf（在这里配置redis），src(redis的可执行文件) 启动12cd src./redis-server 测试另外开启一个终端或窗口，开启redis-cli12345src/redis-cliredis&gt; set test helloWorldOKredis&gt; get test"helloWorld" 在window上安装redis服务在Redis的官网上是找不到windows的下载包的，因为Redis官方并不支持windows,但是我们可以从github开源社区找到redis的windows版本进行下载， 安装戳这里进行下载拿到zip文件进行解压，目录如下同样我们只用到了以下几个文件： redis.windows.conf redis.windows-service.conf redis-server redis-cli启动在cmd中直接输入以下命令回车123redis-server redis.windows.conf #这个是以单独一个窗口运行redis服务，如果你想把redis作为windows服务去运行，请使用下面的命令redis-server redis.windows-service.conf 不管是linux还是windows启动成功后你都会看到下面这个界面 管理windows下就可以使用图形化去测试redis了，使用redis的图形化界面可以查看redis缓存的数据，在这里我使用的是Redis Desktop Manager如下图戳这里下载具体安装不在介绍 结语安装过程有时候并不是一帆风顺的，这很正常，我在安装redis遇到如下问题 端口号未开放6379或者是被占用 防火墙没有关闭 配置文件中的bind没有打开，或者redis内存设置过大 window权限不够你们在安装过程中也可能会遇到我这样的问题，也可能会遇到新的问题，所以如果你在安装使用过程中有问题，请在下方留言，我很乐意问你解答。 你要有一个简单的梦，让你只要想到就微笑的梦。]]></content>
