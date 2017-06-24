@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[找你们需要的]]></title>
+    <url>%2Fblog%2F2017%2Fpage.html</url>
+    <content type="text"><![CDATA[前言 你是否有考虑过自己的路该如何走，做好自己的规划了吗? 前台 Html+css 密码：nxki javaScript 密码：652f jQuery 密码：vjtw Ajax 密码：cfr1 Bootstrapt 后台 Html+css 密码：nxki Servlet 密码：0faj JSP 密码：l75g SSM(Spring+SpringMVC+Mybatis) Maven、SVN、Redis 上方推荐的视频要是不合你们的胃口，请自行在下方的视频学习或者文本学习中搜索 其它视频学习 网易云课堂 慕课网 极客学院 黑马程序员 文本学习不喜欢看视频的可以来这W3Cschool菜鸟教程 问答网站 stackoverflow CSDN 知乎 博客推荐 廖雪峰 阮一峰 老D 效率神奇搜索Listary （首推！用的人都说好）密码：875f 使用教程everything(也是一款文件搜索软件) 截图贴图Snipaste（截个图还用登QQ？截个图都这么慢） 密码：eyx9 使用教程 录屏ScreenToGif（我的天！连1M都不到） 密码：gi23 文本编辑器SublimeText（哇！多行同时编辑，真是变态）使用教程 以上仅仅是我个人学习过程中用到的一些资料和软件，如果你们有更好的资料，欢迎在下方评论区补充。持续更新中。。。。 凡事不要说“我不会”或“不可能”，因为你根本还没有去做！]]></content>
+      <categories>
+        <category>推荐</category>
+        <category>汇总</category>
+      </categories>
+      <tags>
+        <tag>推荐</tag>
+        <tag>汇总</tag>
+        <tag>福利</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[tomcat服务器的搭建]]></title>
     <url>%2Fblog%2F2017%2Ftomcat%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%90%AD%E5%BB%BA.html</url>
     <content type="text"><![CDATA[前言 Tomcat服务器是一个免费的开放源代码的Web应用服务器,它运行时占用的系统资源小，是一个小型的轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试JSP程序的首选。如果你想配置一个web服务器来放置自己的web应用，那么请继续往下看。 准备 云服务器一台 域名一个(不要也罢,假如你记得住ip的话) x-shell(随便一个远程连接工具都阔以) jdk1.8.0安装包官网点我直接下载 tomcat8.5.0安装包官网点我直接下载安装在这里补充一点 在windows上将上述文件下载过后，可以通过WinSCP将文件从windows上传输到远程Linux服务器上进行安装 或者复制我上面的连接地址，通过远程连接工具x-shell通过wget命令直接进行下载 安装jdk 解压到文件夹/usr/local/ 1tar -zxvf jdk-8u131-linux-x64.tar.gz -C /usr/local/ 配置环境变量修改/etc/profile 文件 1vim /etc/profile 配置JAVA_HOME 写入以下命令123export JAVA_HOME=/usr/local/jdk1.8.0_121export CLASSPATH=.:$JAVA_HOME/jreexport PATH=$PATH:$JAVA_HOME/bin 测试12source /etc/profile #使配置文件生效java javac #命令测试 安装tomcat 解压到文件夹/usr/local 1tar -zxvf apache-tomcat-8.5.15.tar.gz -C /usr/local/ 配置(选改) 修改tomcat/config/service.xml 中tomcat的端口号改为80 通过浏览器访问主页http://ip:80/ 如下图 完成上面两步就可以把自己的web项目部署在服务器上了，但是每次部署还要通过命令行远程传输项目，不免有些麻烦，现在我们就通过tomcat自带的web管理界面去上传我们的项目到服务器管理通过ip 远程访问tomcat的web管理界面 修改tomcat/conf/tomcat-user.xml配置文件 12345vim tomcat/conf/tomcat-user.xml# 加入以下文件&lt;role rolename="manager-script"/&gt;&lt;role rolename="manager-gui"/&gt;&lt;user username="username" password="password" roles="manager-script,manager-gui"/&gt; 此时只能通过本地访问，若要远程访问，则需要修改以下配置文件 123456789vim tomcat/conf/service.xml# 修改&lt;Engine name="Catalina" defaultHost="119.29.230.44"&gt; # 配置虚拟目录 在&lt;/Host&gt;上加入 &lt;Context path="manager" privileged="true"docBase="/usr/local/tomcat-8.5.12/webapps/manager"&gt;&lt;/Context&gt;&lt;Context path="host-manager" privileged="true" docBase="/usr/local/tomcat-8.5.12/webapps/host-manager"&gt;&lt;/Context&gt;# 启动tomcatcd /usr/local/tomcat-8.5.12/bin./startup.sh 测试登陆http://ip:80/点击上传你的文件吧结语 理想和现实总是有差距的，幸好还有差距，不然，谁还稀罕理想？]]></content>
