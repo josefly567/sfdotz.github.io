@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[1.1111111111111112e+31]]></title>
-    <url>%2Fblog%2F2017%2Fpage-1.html</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[找你们需要的]]></title>
     <url>%2Fblog%2F2017%2Fpage.html</url>
     <content type="text"><![CDATA[前言 你是否有考虑过自己的路该如何走，做好自己的规划了吗? 前台 Html+css 密码：nxki javaScript 密码：652f jQuery 密码：vjtw Ajax 密码：cfr1 Bootstrapt 后台 Html+css 密码：nxki Servlet 密码：0faj JSP 密码：l75g SSM(Spring+SpringMVC+Mybatis) Maven、SVN、Redis 上方推荐的视频要是不合你们的胃口，请自行在下方的视频学习或者文本学习中搜索 其它视频学习 网易云课堂 慕课网 极客学院 黑马程序员 文本学习不喜欢看视频的可以来这W3Cschool菜鸟教程 问答网站 stackoverflow CSDN 知乎 博客推荐 廖雪峰 阮一峰 老D 效率神奇搜索Listary （首推！用的人都说好）密码：875f 使用教程everything(也是一款文件搜索软件) 截图贴图Snipaste（截个图还用登QQ？截个图都这么慢） 密码：eyx9 使用教程 录屏ScreenToGif（我的天！连1M都不到） 密码：gi23 文本编辑器SublimeText（哇！多行同时编辑，真是变态）使用教程 以上仅仅是我个人学习过程中用到的一些资料和软件，如果你们有更好的资料，欢迎在下方评论区补充。持续更新中。。。。 学长寄语乔鹏学长:前端手册HTML+CSSjavaScriptjQuery编译器(SublimeText、HBuilder) 在前期学习中以HTML+CSS+JavaScript为重，HTML+CSS不用多说这是学习的开端，你们已经学完Java(我认为这是帅飞学长和顺顺学长为你们做的很棒的决定)学起js并不吃力，js是万恶之源，以后要学的jQuery(已经成为必学)框架、还有你们自己要编写的框架，都是以js为基础的。 网络是个好资源，要学会在网上学习，在学习中遇到的问题网上都有相应的解答，这里首推Google(百度太烂了)。 在学习过程中要学会总结和借鉴，当遇到一个好的网页时要看它的布局和搭配，在浏览器中单击右键有个查看页面源代码，把它偷下来(不，是借鉴)。 编译器这方面前期先用记事本或者Notepad++写，以后熟练了再用上面给的专业编译器(上面两个都好用，我用的是HBuilder)。再唠叨一句：不要把学习当做一种负担，要当做一种乐趣(它可是能挣钱的噢)！ 顺顺学长:SSM全套 凡事不要说“我不会”或“不可能”，因为你根本还没有去做！]]></content>
@@ -29,8 +24,8 @@
         <category>服务搭建</category>
       </categories>
       <tags>
-        <tag>linux</tag>
         <tag>学习</tag>
+        <tag>linux</tag>
         <tag>tomcat，web服务器</tag>
       </tags>
   </entry>
