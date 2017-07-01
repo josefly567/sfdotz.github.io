@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sfdotz.me/"/>
-  <updated>2017-06-24T03:10:48.023Z</updated>
+  <updated>2017-06-26T01:25:49.118Z</updated>
   <id>http://sfdotz.me/</id>
   
   <author>
@@ -16,11 +16,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>1.1111111111111112e+31</title>
+    <link href="http://sfdotz.me/blog/2017/page-1.html"/>
+    <id>http://sfdotz.me/blog/2017/page-1.html</id>
+    <published>2017-06-26T01:25:25.000Z</published>
+    <updated>2017-06-26T01:25:49.118Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>找你们需要的</title>
     <link href="http://sfdotz.me/blog/2017/page.html"/>
     <id>http://sfdotz.me/blog/2017/page.html</id>
     <published>2017-06-24T01:20:18.000Z</published>
-    <updated>2017-06-24T03:10:48.023Z</updated>
+    <updated>2017-07-01T13:31:12.293Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>　　你是否有考虑过自己的路该如何走，做好自己的规划了吗?</p>
 <a id="more"></a>
@@ -62,6 +76,7 @@
 <h3 id="文本编辑器"><a href="#文本编辑器" class="headerlink" title="文本编辑器"></a>文本编辑器</h3><p><a href="https://www.sublimetext.com/3" target="_blank" rel="external">SublimeText</a>（哇！多行同时编辑，真是变态）<a href="http://www.cnblogs.com/wind128/p/4409422.html" target="_blank" rel="external">使用教程</a></p>
 <p><strong>以上仅仅是我个人学习过程中用到的一些资料和软件，如果你们有更好的资料，欢迎在下方评论区补充。</strong><br><em><p align="right">持续更新中。。。。</p></em></p>
 <h1 id="学长寄语"><a href="#学长寄语" class="headerlink" title="学长寄语"></a>学长寄语</h1><h2 id="乔鹏学长"><a href="#乔鹏学长" class="headerlink" title="乔鹏学长:"></a>乔鹏学长:</h2><p><a href="http://pan.baidu.com/s/1o8PrDF0" target="_blank" rel="external">前端手册</a><br><a href="http://pan.baidu.com/s/1sk8Gw6D" target="_blank" rel="external">HTML+CSS</a><br><a href="http://pan.baidu.com/s/1i4YFhJZ" target="_blank" rel="external">javaScript</a><br><a href="http://pan.baidu.com/s/1jI41dFw" target="_blank" rel="external">jQuery</a><br>编译器(<a href="https://www.sublimetext.com/3" target="_blank" rel="external">SublimeText</a>、<a href="http://www.dcloud.io/" target="_blank" rel="external">HBuilder</a>)<br>　　在前期学习中以HTML+CSS+JavaScript为重，HTML+CSS不用多说这是学习的开端，你们已经学完Java(我认为这是帅飞学长和顺顺学长为你们做的很棒的决定)学起js并不吃力，js是万恶之源，以后要学的jQuery(已经成为必学)框架、还有你们自己要编写的框架，都是以js为基础的。<br> 　　网络是个好资源，要学会在网上学习，在学习中遇到的问题网上都有相应的解答，这里首推Google(百度太烂了)。<br>　　在学习过程中要学会总结和借鉴，当遇到一个好的网页时要看它的布局和搭配，在浏览器中单击右键有个查看页面源代码，把它偷下来(不，是借鉴)。<br>　　编译器这方面前期先用记事本或者Notepad++写，以后熟练了再用上面给的专业编译器(上面两个都好用，我用的是HBuilder)。<br>再唠叨一句：不要把学习当做一种负担，要当做一种乐趣(它可是能挣钱的噢)！</p>
+<h2 id="顺顺学长"><a href="#顺顺学长" class="headerlink" title="顺顺学长:"></a>顺顺学长:</h2><p><a href="http://pan.baidu.com/share/link?shareid=2651042504&amp;uk=3885444149" target="_blank" rel="external">SSM全套</a></p>
 <blockquote>
 <h1 id="凡事不要说“我不会”或“不可能”，因为你根本还没有去做！"><a href="#凡事不要说“我不会”或“不可能”，因为你根本还没有去做！" class="headerlink" title="凡事不要说“我不会”或“不可能”，因为你根本还没有去做！"></a><center>凡事不要说“我不会”或“不可能”，因为你根本还没有去做！</center></h1></blockquote>
 ]]></content>
@@ -153,9 +168,9 @@
       <category term="服务搭建" scheme="http://sfdotz.me/categories/%E5%AD%A6%E4%B9%A0/linux/%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="学习" scheme="http://sfdotz.me/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
       <category term="linux" scheme="http://sfdotz.me/tags/linux/"/>
+    
+      <category term="学习" scheme="http://sfdotz.me/tags/%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="tomcat，web服务器" scheme="http://sfdotz.me/tags/tomcat%EF%BC%8Cweb%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
