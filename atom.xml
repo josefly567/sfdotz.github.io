@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sfdotz.me/"/>
-  <updated>2017-07-24T00:52:10.797Z</updated>
+  <updated>2017-07-24T01:01:48.597Z</updated>
   <id>http://sfdotz.me/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://sfdotz.me/blog/2017/Docker.html"/>
     <id>http://sfdotz.me/blog/2017/Docker.html</id>
     <published>2017-07-24T00:50:28.996Z</published>
-    <updated>2017-07-24T00:52:10.797Z</updated>
+    <updated>2017-07-24T01:01:48.597Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>　　我的程序在本地运行没问题啊！我觉得程序员应该都说过这句话，自己电脑上的环境与别的电脑不一样，导致程序运行不了；如果每次装系统都需要去配环境而浪费自己的时间等问题，如果你有这些的困扰，那么来和我一起学习Docker吧！<br><a id="more"></a></p>
 <h1 id="了解Docker"><a href="#了解Docker" class="headerlink" title="了解Docker"></a>了解Docker</h1><h2 id="Docker思想"><a href="#Docker思想" class="headerlink" title="Docker思想"></a>Docker思想</h2><ul>
@@ -72,7 +72,7 @@
 </ol>
 <p>使用示例<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//查看本机镜像列表</div><div class="line">docker images</div><div class="line">//拉取镜像,不填写地址默认在hub.docker.com上找</div><div class="line">docker pull hello-world</div><div class="line">//运行，从镜像创建容器</div><div class="line">docker run hello-world</div></pre></td></tr></table></figure></p>
 <p><img src="http://orjpbpt1b.bkt.clouddn.com/dockerCmd05.png" alt=""><br>如图：当执行docker pull hello-world 时，docker客户端会向docker daemon 发送一个docker pull命令，告诉docker daemon 要拉取一个hello-world镜像，docker daemon 会先在本地检查是否有此镜像，如果没有再从目标服务器拉取到本地；当执行docker run 时，过程一样，先向docker daemon 发送命令，docker daemon 检查本地是否存在，如果不存在，再从远程docker仓库拉取回本地，在运行这个镜像变成一个容器</p>
-<h1 id="Docker进阶"><a href="#Docker进阶" class="headerlink" title="Docker进阶"></a>Docker进阶</h1><h2 id="运行Nginx"><a href="#运行Nginx" class="headerlink" title="运行Nginx"></a>运行Nginx</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">//进入docker仓库网站查询nginx镜像，复制pull地址</div><div class="line">docker pull ....</div><div class="line">//查看目前正在运行的容器</div><div class="line">docker ps</div><div class="line">//后台运行</div><div class="line">docker -d  ...</div><div class="line">//进入容器内部-i保证输入有效-t分配一个伪终端进行输入命令</div><div class="line">docker <span class="built_in">exec</span> -it 容器id(不用写全) bash</div><div class="line">//已经进入容器内部，相当于一台linux,</div><div class="line">//查询nginx在什么位置</div><div class="line"><span class="built_in">which</span> nginx</div><div class="line">//查询当前服务的进程</div><div class="line">ps -ef</div><div class="line">//退出容器</div><div class="line"><span class="built_in">exit</span></div></pre></td></tr></table></figure>
+<h2 id="运行Nginx"><a href="#运行Nginx" class="headerlink" title="运行Nginx"></a>运行Nginx</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">//进入docker仓库网站查询nginx镜像，复制pull地址</div><div class="line">docker pull ....</div><div class="line">//查看目前正在运行的容器</div><div class="line">docker ps</div><div class="line">//后台运行</div><div class="line">docker -d  ...</div><div class="line">//进入容器内部-i保证输入有效-t分配一个伪终端进行输入命令</div><div class="line">docker <span class="built_in">exec</span> -it 容器id(不用写全) bash</div><div class="line">//已经进入容器内部，相当于一台linux,</div><div class="line">//查询nginx在什么位置</div><div class="line"><span class="built_in">which</span> nginx</div><div class="line">//查询当前服务的进程</div><div class="line">ps -ef</div><div class="line">//退出容器</div><div class="line"><span class="built_in">exit</span></div></pre></td></tr></table></figure>
 <h2 id="Docker网络"><a href="#Docker网络" class="headerlink" title="Docker网络"></a>Docker网络</h2><h3 id="网络类型"><a href="#网络类型" class="headerlink" title="网络类型"></a>网络类型</h3><ul>
 <li>Bridge </li>
 <li>Host</li>
@@ -92,12 +92,16 @@
     
     </summary>
     
-      <category term="容器，Docker" scheme="http://sfdotz.me/categories/%E5%AE%B9%E5%99%A8%EF%BC%8CDocker/"/>
+      <category term="容器" scheme="http://sfdotz.me/categories/%E5%AE%B9%E5%99%A8/"/>
+    
+      <category term="Docker" scheme="http://sfdotz.me/categories/%E5%AE%B9%E5%99%A8/Docker/"/>
     
     
       <category term="学习" scheme="http://sfdotz.me/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="容器，Docker" scheme="http://sfdotz.me/tags/%E5%AE%B9%E5%99%A8%EF%BC%8CDocker/"/>
+      <category term="容器" scheme="http://sfdotz.me/tags/%E5%AE%B9%E5%99%A8/"/>
+    
+      <category term="Docker" scheme="http://sfdotz.me/tags/Docker/"/>
     
   </entry>
   
