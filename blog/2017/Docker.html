@@ -115,7 +115,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="学习,容器,Docker," />
+  <meta name="keywords" content="学习,容器，Docker," />
 
 
 
@@ -134,14 +134,14 @@
 
 
 <meta name="description" content="前言　　我的程序在本地运行没问题啊！我觉得程序员应该都说过这句话，自己电脑上的环境与别的电脑不一样，导致程序运行不了；如果每次装系统都需要去配环境而浪费自己的时间等问题，如果你有这些的困扰，那么来和我一起学习Docker吧！">
-<meta name="keywords" content="学习,容器,Docker">
+<meta name="keywords" content="学习,容器，Docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker初探">
 <meta property="og:url" content="http://sfdotz.me/blog/2017/Docker.html">
 <meta property="og:site_name" content="Mr.zhao">
 <meta property="og:description" content="前言　　我的程序在本地运行没问题啊！我觉得程序员应该都说过这句话，自己电脑上的环境与别的电脑不一样，导致程序运行不了；如果每次装系统都需要去配环境而浪费自己的时间等问题，如果你有这些的困扰，那么来和我一起学习Docker吧！">
 <meta property="og:image" content="http://orjpbpt1b.bkt.clouddn.com/DockerLogo07">
-<meta property="og:updated_time" content="2017-07-24T01:01:48.597Z">
+<meta property="og:updated_time" content="2017-07-24T03:21:06.568Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker初探">
 <meta name="twitter:description" content="前言　　我的程序在本地运行没问题啊！我觉得程序员应该都说过这句话，自己电脑上的环境与别的电脑不一样，导致程序运行不了；如果每次装系统都需要去配环境而浪费自己的时间等问题，如果你有这些的困扰，那么来和我一起学习Docker吧！">
@@ -415,17 +415,9 @@
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
 
-                  <a href="/categories/容器/" itemprop="url" rel="index">
+                  <a href="/categories/容器，Docker/" itemprop="url" rel="index">
                     
-                  </a>
-                </span>
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-
-                  <a href="/categories/容器/Docker/" itemprop="url" rel="index">
-                    
-                      <span itemprop="name">Docker</span>
+                      <span itemprop="name">容器，Docker</span>
                     
                   </a>
                 </span>
@@ -477,7 +469,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,650 字
+                  1,718 字
                 </span>
               
 
@@ -493,7 +485,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  6 分钟
+                  7 分钟
                 </span>
               
             </div>
@@ -521,7 +513,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://orjpbpt1b.bkt.clouddn.com/DockerLogo07" rel="gallery_cj5hg6alq0000ykai0ucfgqyo"
+                 href="http://orjpbpt1b.bkt.clouddn.com/DockerLogo07" rel="gallery_cj5hl5p3e00002oaio71qqowb"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://orjpbpt1b.bkt.clouddn.com/DockerLogo07" itemprop="contentUrl"/>
               </a>
@@ -560,7 +552,8 @@
 </ul>
 <h2 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h2><h3 id="Widows"><a href="#Widows" class="headerlink" title="Widows"></a>Widows</h3><p><a href="https://www.docker.com/products/docker#/windows" target="_blank" rel="external">Win10</a>(安装如下)<br><a href="https://www.docker.com/products/docker-toolbox" target="_blank" rel="external">Win10之外</a></p>
 <p>下载后直接进行安装，安装后生成四个文件,点击Docker Quickstart Terminal进行运行<br><img src="http://orjpbpt1b.bkt.clouddn.com/DockerInstall01.png" alt=""><br>第一次运行过程会比较慢，因为会从github上下载一个<a href="http://pan.baidu.com/s/1qYyc0ag" target="_blank" rel="external">boot2docker.iso</a>文件,可以先下载下来，放入c盘C:\Users\Administrator.docker\machine\cache目录下，在进行运行.<br><img src="http://orjpbpt1b.bkt.clouddn.com/DockerSuccess04.png" alt="安装成功"></p>
-<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p><a href="">Redhat&amp;CentOs</a><a href="http://www.imooc.com/article/16448" target="_blank" rel="external">参考教程</a><br>系统要求：64-bit OS and 内核version 3.10<br><a href="">Ubuntu</a><br>系统要求：64-bit OS and 内核version 3.10<br><strong>Ubuntu安装命令如下：</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//查看系统内核是否符合要求</div><div class="line">$ uname -r</div><div class="line">$ su</div><div class="line"><span class="comment"># apt-get update  保证系统是最新版本</span></div><div class="line">//使用系统自带的docker安装包进行安装，可能不是最新版本</div><div class="line"><span class="comment"># apt-get install -y docker.io</span></div><div class="line">//使用最新的docker安装包进行安装</div><div class="line"><span class="comment"># curl -s https://get.docker.com | sh</span></div><div class="line">//启动docker服务</div><div class="line"><span class="comment"># service docker start</span></div><div class="line">//检查</div><div class="line"><span class="comment"># docker version</span></div></pre></td></tr></table></figure></p>
+<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p><a href="">Redhat&amp;CentOs</a><br>系统要求：64-bit OS and 内核version 3.10<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">//检查内核版本</div><div class="line">uname -r</div><div class="line">//更新yum仓库</div><div class="line">yum update</div><div class="line">//添加yum仓库</div><div class="line">vim /etc/yum.repos.d/docker.repo</div><div class="line">//添加如下内容</div><div class="line">[dockerrepo] name=Docker Repository baseurl=https://yum.dockerproject.org/repo/main/centos/<span class="variable">$releasever</span>/ enabled=1 </div><div class="line">gpgcheck=1 gpgkey=https://yum.dockerproject.org/gpg</div><div class="line">//安装docker</div><div class="line">yum -y install docker-engine</div><div class="line">//启动docker</div><div class="line">systemctl start docker.service</div><div class="line">//验证</div><div class="line">docker version</div></pre></td></tr></table></figure></p>
+<p><a href="">Ubuntu</a><br>系统要求：64-bit OS and 内核version 3.10<br><strong>Ubuntu安装命令如下：</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//查看系统内核是否符合要求</div><div class="line">$ uname -r</div><div class="line">$ su</div><div class="line"><span class="comment"># apt-get update  保证系统是最新版本</span></div><div class="line">//使用系统自带的docker安装包进行安装，可能不是最新版本</div><div class="line"><span class="comment"># apt-get install -y docker.io</span></div><div class="line">//使用最新的docker安装包进行安装</div><div class="line"><span class="comment"># curl -s https://get.docker.com | sh</span></div><div class="line">//启动docker服务</div><div class="line"><span class="comment"># service docker start</span></div><div class="line">//检查</div><div class="line"><span class="comment"># docker version</span></div></pre></td></tr></table></figure></p>
 <h1 id="Docker使用"><a href="#Docker使用" class="headerlink" title="Docker使用"></a>Docker使用</h1><p><strong>一些常用命令：</strong></p>
 <ol>
 <li>创建docker镜像docker pull[OPTIONS]     NAME[:TAG]</li>
@@ -658,9 +651,7 @@
           
             <a href="/tags/学习/" rel="tag"><i class="fa fa-tag"></i> 学习</a>
           
-            <a href="/tags/容器/" rel="tag"><i class="fa fa-tag"></i> 容器</a>
-          
-            <a href="/tags/Docker/" rel="tag"><i class="fa fa-tag"></i> Docker</a>
+            <a href="/tags/容器，Docker/" rel="tag"><i class="fa fa-tag"></i> 容器，Docker</a>
           
         </div>
       
@@ -766,7 +757,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -777,7 +768,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

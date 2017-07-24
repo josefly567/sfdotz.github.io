@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://sfdotz.me/blog/2017/Docker.html</loc>
-    <lastmod>2017-07-24T01:01:48.597Z</lastmod>
+    <lastmod>2017-07-24T03:21:06.568Z</lastmod>
     <data>
         <display>
         <title>Docker初探</title>
@@ -13,17 +13,12 @@
         
         <tag>学习</tag>
          
-        <tag>容器</tag>
-         
-        <tag>Docker</tag>
+        <tag>容器，Docker</tag>
          
          
            
              
-              <breadCrumb title="容器" url="http://sfdotz.me/categories/%E5%AE%B9%E5%99%A8/"/>
-          
-             
-              <breadCrumb title="Docker" url="http://sfdotz.me/categories/%E5%AE%B9%E5%99%A8/Docker/"/>
+              <breadCrumb title="容器，Docker" url="http://sfdotz.me/categories/%E5%AE%B9%E5%99%A8%EF%BC%8CDocker/"/>
           
         </display>
     </data>
